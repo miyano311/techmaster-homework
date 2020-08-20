@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	div {
+		align-content: center;
+		width: 200px;
+		height: 200px;
+		position: relative;
+		animation-name: example;
+		animation-duration: 4s;
+		animation-iteration-count: infinite;
+	}
+
+	@keyframes example {
+		0%   {transform: none;}
+		25%  {transform: scale(2,2);}
+		50%  {transform: none;}
+		75%  {transform: scale(1.5,1.5);}
+		100% {transform: none;}
+	}
+
+	.heart {
+		background-color: red;
+		display: inline-block;
+		height: 50px;
+		margin: 0 10px;
+		position: relative;
+		top: 0;
+		transform: rotate(-45deg);
+		width: 50px;
+	}
+
+	.heart:before,
+	.heart:after {
+		content: "";
+		background-color: red;
+		border-radius: 50%;
+		height: 50px;
+		position: absolute;
+		width: 50px;
+	}
+
+	.heart:before {
+		top: -25px;
+		left: 0;
+	}
+
+	.heart:after {
+		left: 25px;
+		top: 0;
+	}
+
+</style>
+</head>
+<body>
+	<p>This is a red heart.<br/></p>
+
+	<div>
+	<span class="heart"></span>
+	</div>
+</body>
+</html>

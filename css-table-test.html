@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewpoint" content="width=device-width, initial-scale=1.0" />
+		<title>Form</title>
+	</head>
+	<style>
+		table,
+		tr,
+		td,
+		th {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		
+		tr:nth-child(even) {
+			background: green;
+		}
+		
+		tr:nth-child(odd) {
+			background: yellow;
+		}
+		
+	</style>
+	<body>
+		<table>
+			<thead>
+				<caption>A table full of Jarbl</caption>
+				<tr>
+					<th scope="col">&nbsp;</th>
+					<th scope="col" colspan="2">jarbl</th>
+					<th scope="col" colspan="2">jarbl</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<th scope="row" rowspan="2">jarbl</th>
+					<td>jarbl</td>
+					<td>jarbl</td>
+					<td>jarbl</td>
+					<td>jarbl</td>
+				</tr>
+				<tr>
+					<td>jarbl</td>
+					<td>jarbl</td>
+					<td>jarbl</td>
+					<td>jarbl</td>
+				</tr>
+				<tr>
+					<th scope="row" rowspan="2">jarbl</th>
+					<td>jarbl</td>
+					<td>jarbl</td>
+					<td>jarbl</td>
+					<td>jarbl</td>
+				</tr>
+				<tr>
+					<td>jarbl</td>
+					<td>jarbl</td>
+					<td>jarbl</td>
+					<td>jarbl</td>
+				</tr>
+			</tbody>
+		</table>	
+	</body>
+</html>

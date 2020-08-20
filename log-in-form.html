@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewpoint" content="width=device-width, initial-scale=1.0" />
+		<title>Form</title>
+		<style>
+			ul {
+				list-style: none;
+			}
+			
+			li {
+				position: relative;
+				margin-bottom: 20px;
+			}
+			
+			input {
+				border: 0;
+				border-bottom: 1px solid black;
+				padding: 10px;
+				font-size: 20px;
+			}
+			
+			input:focus {
+				outline: none;
+			}
+			
+			input::placeholder {
+				opacity: 0;
+			}
+			
+			label {
+				position: absolute;
+				top: 50%;
+				left: 10px;
+				transform: translate(0, -50%);
+				transition: top 0.1s;
+			}
+			
+			input:not(:placeholder-shown) + label  {
+				top: -10%;
+			}
+			</style>
+	</head>
+	
+	
+	<body>
+		<form action="">
+			<ul>
+			<li>
+				<input type="text" id="test" placeholder="Ho ten" />
+				<label for="test">Ho ten</label>
+				</li><br />
+
+			<li>
+				<input type="text" id="text" name="Email" value="" placeholder="Email" />
+				<label for="text">Email</label>
+				</li><br />
+
+			<li>
+				<input type="text" id="text" name="Phone" value="" placeholder="Dien thoai" />
+				<label for="">Dien thoai</label>
+				</li><br />
+			
+			<li>
+				<input type="text" id="text" name="Password" value="" placeholder="Mat khau" />
+				<label for="">Mat khau</label>
+				</li><br />
+			
+			<li>
+				<input type="text" id="text" name="RetypePassword" value="" placeholder="Nhap lai mat khau" />
+				<label for="">Nhap lai mat khau</label>
+				</li>
+			</ul>
+			<button type="submit">Submit</button>
+		</form>
+	</body>
+</html>
