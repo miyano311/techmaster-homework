@@ -1,0 +1,3128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager 
+    <script>
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5KDG7W6');
+	</script>
+    <!-- End Google Tag Manager -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="/images/Icon/WoWSFT_Icon.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1.0, user-scalable=yes" />
+    <script src="jquery-3.4.1.min.js"></script>
+    <!--script data-ad-client="ca-pub-2111375563174258" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script-->
+    <title>WoWS Fitting Tool: Electric Boogalo</title>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) 
+<noscript><iframe class="hidden" src="https://www.googletagmanager.com/ns.html?id=GTM-5KDG7W6"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+    <div class="top">
+        <ul>
+        <li>
+            <a href="index.html"><span>Home</span></a>
+        </li>
+        <li class="active">
+            <a href="ship.html"><span>Fitting Tool</span></a>
+        </li>
+        <li>
+            <a href="/compare"><span>Ship Comparison</span></a>
+        </li>
+        <li>
+            <a href="/arty"><span>Artillery Chart</span></a>
+        </li>
+        <li>
+            <a href="/research"><span>Research XP</span></a>
+        </li>
+    </ul>
+    </div>
+</header>
+<main>
+    <div class="main">
+        <br />
+        
+    <div id="notification">
+        <div>Click on a ship for fitting.</div>
+    </div>
+    
+
+    </div>
+</main>
+<footer>
+    
+    <div class="bottom-fix">
+        <div>
+            <h4>Contact EdibleBug on Reddit for service related issues.</h4><br />
+            <p>
+                All copyright materials provided by Wargaming.net are owned by Wargaming.net.<br />
+                If you do not acknowledge this, please refrain from using the service.<br />
+                I am not responsible for any problems that may occur by using this service.<br /><br />
+                Copyright otherwise not specified are part of WoWSFT, and they are available under MIT license.
+            </p>
+        </div>
+    </div>
+
+</footer>
+<div class="shipsList">
+    <div class="shipsList_expand">
+        <span class="shipsList_top contract">Ships List</span>
+        <div class="nation">
+            <span>Commonwealth</span>
+            <div class="dropdown_main">
+                <div>
+                    <span>Premium</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Cruiser</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="ship.html?index=PUSC506">
+                                            <span data-nation="Commonwealth" data-shipType="FILTER_PREMIUM" data-ship="PUSC506">6 - Perth</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Destroyer</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PUSD503">
+                                            <span data-nation="Commonwealth" data-shipType="FILTER_PREMIUM" data-ship="PUSD503">3 - Vampire</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PUSD507">
+                                            <span data-nation="Commonwealth" data-shipType="FILTER_PREMIUM" data-ship="PUSD507">7 - Haida</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nation">
+            <span>Europe</span>
+            <div class="dropdown_main">
+                <div>
+                    <span>Cruiser</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PWSC101">
+                                        <span data-nation="Europe" data-shipType="CRUISER" data-ship="PWSC101">1 - Gryf</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Destroyer</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PWSD102">
+                                        <span data-nation="Europe" data-shipType="DESTROYER" data-ship="PWSD102">2 - Tátra</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PWSD103">
+                                        <span data-nation="Europe" data-shipType="DESTROYER" data-ship="PWSD103">3 - Romulus</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PWSD104">
+                                        <span data-nation="Europe" data-shipType="DESTROYER" data-ship="PWSD104">4 - Klas Horn</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PWSD105">
+                                        <span data-nation="Europe" data-shipType="DESTROYER" data-ship="PWSD105">5 - Visby</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PWSD106">
+                                        <span data-nation="Europe" data-shipType="DESTROYER" data-ship="PWSD106">6 - Västerås</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PWSD107">
+                                        <span data-nation="Europe" data-shipType="DESTROYER" data-ship="PWSD107">7 - Skåne</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PWSD108">
+                                        <span data-nation="Europe" data-shipType="DESTROYER" data-ship="PWSD108">8 - Öland</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PWSD109">
+                                        <span data-nation="Europe" data-shipType="DESTROYER" data-ship="PWSD109">9 - Östergötland</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PWSD110">
+                                        <span data-nation="Europe" data-shipType="DESTROYER" data-ship="PWSD110">10 - Halland</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Premium</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Battleship</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PWSB504">
+                                            <span data-nation="Europe" data-shipType="FILTER_PREMIUM" data-ship="PWSB504">5 - Viribus Unitis</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Destroyer</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PWSD501">
+                                            <span data-nation="Europe" data-shipType="FILTER_PREMIUM" data-ship="PWSD501">7 - Błyskawica</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PWSD508">
+                                            <span data-nation="Europe" data-shipType="FILTER_PREMIUM" data-ship="PWSD508">8 - Orkan</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PWSD510">
+                                            <span data-nation="Europe" data-shipType="FILTER_PREMIUM" data-ship="PWSD510">9 - Friesland</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PWSD610">
+                                            <span data-nation="Europe" data-shipType="FILTER_PREMIUM" data-ship="PWSD610">10 - Småland</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span>Test Ship</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Destroyer</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PWSD910">
+                                            <span data-nation="Europe" data-shipType="TEST_SAMPLE" data-ship="PWSD910">10 - Lappland</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nation">
+            <span>France</span>
+            <div class="dropdown_main">
+                <div>
+                    <span>Battleship</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PFSB103">
+                                        <span data-nation="France" data-shipType="BATTLESHIP" data-ship="PFSB103">3 - Turenne</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSB104">
+                                        <span data-nation="France" data-shipType="BATTLESHIP" data-ship="PFSB104">4 - Courbet</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSB105">
+                                        <span data-nation="France" data-shipType="BATTLESHIP" data-ship="PFSB105">5 - Bretagne</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSB106">
+                                        <span data-nation="France" data-shipType="BATTLESHIP" data-ship="PFSB106">6 - Normandie</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSB107">
+                                        <span data-nation="France" data-shipType="BATTLESHIP" data-ship="PFSB107">7 - Lyon</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSB108">
+                                        <span data-nation="France" data-shipType="BATTLESHIP" data-ship="PFSB108">8 - Richelieu</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSB109">
+                                        <span data-nation="France" data-shipType="BATTLESHIP" data-ship="PFSB109">9 - Alsace</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSB110">
+                                        <span data-nation="France" data-shipType="BATTLESHIP" data-ship="PFSB110">10 - République</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Cruiser</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PFSC101">
+                                        <span data-nation="France" data-shipType="CRUISER" data-ship="PFSC101">1 - Bougainville</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSC102">
+                                        <span data-nation="France" data-shipType="CRUISER" data-ship="PFSC102">2 - Jurien de la Gravière</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSC103">
+                                        <span data-nation="France" data-shipType="CRUISER" data-ship="PFSC103">3 - Friant</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSC104">
+                                        <span data-nation="France" data-shipType="CRUISER" data-ship="PFSC104">4 - Duguay-Trouin</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSC105">
+                                        <span data-nation="France" data-shipType="CRUISER" data-ship="PFSC105">5 - Émile Bertin</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSC106">
+                                        <span data-nation="France" data-shipType="CRUISER" data-ship="PFSC106">6 - La Galissonnière</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSC107">
+                                        <span data-nation="France" data-shipType="CRUISER" data-ship="PFSC107">7 - Algérie</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSC108">
+                                        <span data-nation="France" data-shipType="CRUISER" data-ship="PFSC108">8 - Charles Martel</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSC109">
+                                        <span data-nation="France" data-shipType="CRUISER" data-ship="PFSC109">9 - Saint-Louis</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSC110">
+                                        <span data-nation="France" data-shipType="CRUISER" data-ship="PFSC110">10 - Henri IV</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Destroyer</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PFSD102">
+                                        <span data-nation="France" data-shipType="DESTROYER" data-ship="PFSD102">2 - Enseigne Gabolde</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSD103">
+                                        <span data-nation="France" data-shipType="DESTROYER" data-ship="PFSD103">3 - Fusilier</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSD104">
+                                        <span data-nation="France" data-shipType="DESTROYER" data-ship="PFSD104">4 - Bourrasque</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSD105">
+                                        <span data-nation="France" data-shipType="DESTROYER" data-ship="PFSD105">5 - Jaguar</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSD106">
+                                        <span data-nation="France" data-shipType="DESTROYER" data-ship="PFSD106">6 - Guépard</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSD107">
+                                        <span data-nation="France" data-shipType="DESTROYER" data-ship="PFSD107">7 - Vauquelin</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSD108">
+                                        <span data-nation="France" data-shipType="DESTROYER" data-ship="PFSD108">8 - Le Fantasque</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSD109">
+                                        <span data-nation="France" data-shipType="DESTROYER" data-ship="PFSD109">9 - Mogador</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PFSD110">
+                                        <span data-nation="France" data-shipType="DESTROYER" data-ship="PFSD110">10 - Kléber</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Premium</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Battleship</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PFSB506">
+                                            <span data-nation="France" data-shipType="FILTER_PREMIUM" data-ship="PFSB506">6 - Dunkerque</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PFSB508">
+                                            <span data-nation="France" data-shipType="FILTER_PREMIUM" data-ship="PFSB508">8 - Gascogne</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PFSB528">
+                                            <span data-nation="France" data-shipType="FILTER_PREMIUM" data-ship="PFSB528">8 - Champagne</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PFSB518">
+                                            <span data-nation="France" data-shipType="FILTER_PREMIUM" data-ship="PFSB518">9 - Jean Bart</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PFSB510">
+                                            <span data-nation="France" data-shipType="FILTER_PREMIUM" data-ship="PFSB510">10 - Bourgogne</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Cruiser</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PFSC506">
+                                            <span data-nation="France" data-shipType="FILTER_PREMIUM" data-ship="PFSC506">6 - De Grasse</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PFSC508">
+                                            <span data-nation="France" data-shipType="FILTER_PREMIUM" data-ship="PFSC508">8 - Bayard</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PFSC510">
+                                            <span data-nation="France" data-shipType="FILTER_PREMIUM" data-ship="PFSC510">10 - Colbert</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Destroyer</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PFSD504">
+                                            <span data-nation="France" data-shipType="FILTER_PREMIUM" data-ship="PFSD504">5 - Siroco</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PFSD506">
+                                            <span data-nation="France" data-shipType="FILTER_PREMIUM" data-ship="PFSD506">6 - Aigle</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PFSD508">
+                                            <span data-nation="France" data-shipType="FILTER_PREMIUM" data-ship="PFSD508">8 - Le Terrible</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PFSD210">
+                                            <span data-nation="France" data-shipType="FILTER_PREMIUM" data-ship="PFSD210">10 - Marceau</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nation">
+            <span>Germany</span>
+            <div class="dropdown_main">
+                <div>
+                    <span>Aircraft Carrier</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PGSA104">
+                                        <span data-nation="Germany" data-shipType="AIRCARRIER" data-ship="PGSA104">4 - Rhein</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSA106">
+                                        <span data-nation="Germany" data-shipType="AIRCARRIER" data-ship="PGSA106">6 - Weser</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSA108">
+                                        <span data-nation="Germany" data-shipType="AIRCARRIER" data-ship="PGSA108">8 - August von Parseval</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSA110">
+                                        <span data-nation="Germany" data-shipType="AIRCARRIER" data-ship="PGSA110">10 - Manfred von Richthofen</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Battleship</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PGSB103">
+                                        <span data-nation="Germany" data-shipType="BATTLESHIP" data-ship="PGSB103">3 - Nassau</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSB104">
+                                        <span data-nation="Germany" data-shipType="BATTLESHIP" data-ship="PGSB104">4 - Kaiser</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSB105">
+                                        <span data-nation="Germany" data-shipType="BATTLESHIP" data-ship="PGSB105">5 - König</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSB106">
+                                        <span data-nation="Germany" data-shipType="BATTLESHIP" data-ship="PGSB106">6 - Bayern</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSB107">
+                                        <span data-nation="Germany" data-shipType="BATTLESHIP" data-ship="PGSB107">7 - Gneisenau</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSB108">
+                                        <span data-nation="Germany" data-shipType="BATTLESHIP" data-ship="PGSB108">8 - Bismarck</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSB109">
+                                        <span data-nation="Germany" data-shipType="BATTLESHIP" data-ship="PGSB109">9 - Friedrich der Große</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSB110">
+                                        <span data-nation="Germany" data-shipType="BATTLESHIP" data-ship="PGSB110">10 - Großer Kurfürst</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Cruiser</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PGSC001">
+                                        <span data-nation="Germany" data-shipType="CRUISER" data-ship="PGSC001">1 - Hermelin</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSC002">
+                                        <span data-nation="Germany" data-shipType="CRUISER" data-ship="PGSC002">2 - Dresden</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSC103">
+                                        <span data-nation="Germany" data-shipType="CRUISER" data-ship="PGSC103">3 - Kolberg</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSC104">
+                                        <span data-nation="Germany" data-shipType="CRUISER" data-ship="PGSC104">4 - Karlsruhe</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSC105">
+                                        <span data-nation="Germany" data-shipType="CRUISER" data-ship="PGSC105">5 - Königsberg</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSC106">
+                                        <span data-nation="Germany" data-shipType="CRUISER" data-ship="PGSC106">6 - Nürnberg</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSC107">
+                                        <span data-nation="Germany" data-shipType="CRUISER" data-ship="PGSC107">7 - Yorck</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSC108">
+                                        <span data-nation="Germany" data-shipType="CRUISER" data-ship="PGSC108">8 - Admiral Hipper</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSC109">
+                                        <span data-nation="Germany" data-shipType="CRUISER" data-ship="PGSC109">9 - Roon</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSC110">
+                                        <span data-nation="Germany" data-shipType="CRUISER" data-ship="PGSC110">10 - Hindenburg</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Destroyer</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PGSD102">
+                                        <span data-nation="Germany" data-shipType="DESTROYER" data-ship="PGSD102">2 - V-25</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSD103">
+                                        <span data-nation="Germany" data-shipType="DESTROYER" data-ship="PGSD103">3 - G-101</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSD104">
+                                        <span data-nation="Germany" data-shipType="DESTROYER" data-ship="PGSD104">4 - V-170</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSD105">
+                                        <span data-nation="Germany" data-shipType="DESTROYER" data-ship="PGSD105">5 - T-22</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSD106">
+                                        <span data-nation="Germany" data-shipType="DESTROYER" data-ship="PGSD106">6 - Ernst Gaede</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSD107">
+                                        <span data-nation="Germany" data-shipType="DESTROYER" data-ship="PGSD107">7 - Leberecht Maass</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSD108">
+                                        <span data-nation="Germany" data-shipType="DESTROYER" data-ship="PGSD108">8 - Z-23</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSD109">
+                                        <span data-nation="Germany" data-shipType="DESTROYER" data-ship="PGSD109">9 - Z-46</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PGSD110">
+                                        <span data-nation="Germany" data-shipType="DESTROYER" data-ship="PGSD110">10 - Z-52</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Premium</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Aircraft Carrier</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PGSA506">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSA506">6 - Erich Loewenhardt</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PGSA518">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSA518">8 - Graf Zeppelin</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PGSA598">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSA598">8 - Graf Zeppelin B</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Battleship</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PGSB503">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSB503">3 - König Albert</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PGSB506">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSB506">6 - Prinz Eitel Friedrich</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PGSB507">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSB507">7 - Scharnhorst</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PGSB597">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSB597">7 - Scharnhorst B</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PGSB002">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSB002">8 - Tirpitz</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PGSB508">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSB508">8 - Odin</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PGSB598">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSB598">8 - Tirpitz B</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PGSB509">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSB509">9 - Pommern</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Cruiser</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PGSC502">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSC502">2 - Emden</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PGSC506">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSC506">6 - Admiral Graf Spee</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PGSC706">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSC706">6 - HSF Admiral Graf Spee</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PGSC507">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSC507">7 - München</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PGSC508">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSC508">8 - Prinz Eugen</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PGSC518">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSC518">8 - Mainz</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PGSC509">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSC509">9 - Siegfried</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PGSC519">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSC519">9 - Ägir</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Destroyer</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PGSD506">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSD506">6 - T-61</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PGSD508">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSD508">7 - Z-39</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PGSD518">
+                                            <span data-nation="Germany" data-shipType="FILTER_PREMIUM" data-ship="PGSD518">8 - Z-35</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nation">
+            <span>Italy</span>
+            <div class="dropdown_main">
+                <div>
+                    <span>Cruiser</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PISC101">
+                                        <span data-nation="Italy" data-shipType="CRUISER" data-ship="PISC101">1 - Eritrea</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PISC102">
+                                        <span data-nation="Italy" data-shipType="CRUISER" data-ship="PISC102">2 - Nino Bixio</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PISC103">
+                                        <span data-nation="Italy" data-shipType="CRUISER" data-ship="PISC103">3 - Taranto</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PISC104">
+                                        <span data-nation="Italy" data-shipType="CRUISER" data-ship="PISC104">4 - Alberto di Giussano</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PISC105">
+                                        <span data-nation="Italy" data-shipType="CRUISER" data-ship="PISC105">5 - Raimondo Montecuccoli</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PISC106">
+                                        <span data-nation="Italy" data-shipType="CRUISER" data-ship="PISC106">6 - Trento</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PISC107">
+                                        <span data-nation="Italy" data-shipType="CRUISER" data-ship="PISC107">7 - Zara</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PISC108">
+                                        <span data-nation="Italy" data-shipType="CRUISER" data-ship="PISC108">8 - Amalfi</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PISC109">
+                                        <span data-nation="Italy" data-shipType="CRUISER" data-ship="PISC109">9 - Brindisi</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PISC110">
+                                        <span data-nation="Italy" data-shipType="CRUISER" data-ship="PISC110">10 - Venezia</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Premium</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Battleship</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PISB505">
+                                            <span data-nation="Italy" data-shipType="FILTER_PREMIUM" data-ship="PISB505">5 - Giulio Cesare</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PISB508">
+                                            <span data-nation="Italy" data-shipType="FILTER_PREMIUM" data-ship="PISB508">8 - Roma</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PISB708">
+                                            <span data-nation="Italy" data-shipType="FILTER_PREMIUM" data-ship="PISB708">8 - AL Littorio</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Cruiser</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PISC505">
+                                            <span data-nation="Italy" data-shipType="FILTER_PREMIUM" data-ship="PISC505">5 - Genova</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PISC506">
+                                            <span data-nation="Italy" data-shipType="FILTER_PREMIUM" data-ship="PISC506">6 - Duca d&#39;Aosta</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PISC507">
+                                            <span data-nation="Italy" data-shipType="FILTER_PREMIUM" data-ship="PISC507">7 - Duca degli Abruzzi</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PISC607">
+                                            <span data-nation="Italy" data-shipType="FILTER_PREMIUM" data-ship="PISC607">7 - Gorizia</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span>Test Ship</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Destroyer</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PISD506">
+                                            <span data-nation="Italy" data-shipType="TEST_SAMPLE" data-ship="PISD506">6 - Leone</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PISD509">
+                                            <span data-nation="Italy" data-shipType="TEST_SAMPLE" data-ship="PISD509">9 - Paolo Emilio</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nation">
+            <span>Japan</span>
+            <div class="dropdown_main">
+                <div>
+                    <span>Aircraft Carrier</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PJSA104">
+                                        <span data-nation="Japan" data-shipType="AIRCARRIER" data-ship="PJSA104">4 - Hōshō</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSA106">
+                                        <span data-nation="Japan" data-shipType="AIRCARRIER" data-ship="PJSA106">6 - Ryūjō</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSA108">
+                                        <span data-nation="Japan" data-shipType="AIRCARRIER" data-ship="PJSA108">8 - Shōkaku</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSA110">
+                                        <span data-nation="Japan" data-shipType="AIRCARRIER" data-ship="PJSA110">10 - Hakuryū</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Battleship</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PJSB001">
+                                        <span data-nation="Japan" data-shipType="BATTLESHIP" data-ship="PJSB001">3 - Kawachi</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSB003">
+                                        <span data-nation="Japan" data-shipType="BATTLESHIP" data-ship="PJSB003">4 - Myōgi</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSB007">
+                                        <span data-nation="Japan" data-shipType="BATTLESHIP" data-ship="PJSB007">5 - Kongō</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSB006">
+                                        <span data-nation="Japan" data-shipType="BATTLESHIP" data-ship="PJSB006">6 - Fusō</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSB010">
+                                        <span data-nation="Japan" data-shipType="BATTLESHIP" data-ship="PJSB010">7 - Nagato</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSB013">
+                                        <span data-nation="Japan" data-shipType="BATTLESHIP" data-ship="PJSB013">8 - Amagi</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSB021">
+                                        <span data-nation="Japan" data-shipType="BATTLESHIP" data-ship="PJSB021">9 - Izumo</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSB018">
+                                        <span data-nation="Japan" data-shipType="BATTLESHIP" data-ship="PJSB018">10 - Yamato</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Cruiser</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PJSC037">
+                                        <span data-nation="Japan" data-shipType="CRUISER" data-ship="PJSC037">1 - Hashidate</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSC035">
+                                        <span data-nation="Japan" data-shipType="CRUISER" data-ship="PJSC035">2 - Chikuma</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSC015">
+                                        <span data-nation="Japan" data-shipType="CRUISER" data-ship="PJSC015">3 - Tenryū</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSC013">
+                                        <span data-nation="Japan" data-shipType="CRUISER" data-ship="PJSC013">4 - Kuma</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSC005">
+                                        <span data-nation="Japan" data-shipType="CRUISER" data-ship="PJSC005">5 - Furutaka</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSC007">
+                                        <span data-nation="Japan" data-shipType="CRUISER" data-ship="PJSC007">6 - Aoba</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSC008">
+                                        <span data-nation="Japan" data-shipType="CRUISER" data-ship="PJSC008">7 - Myōkō</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSC009">
+                                        <span data-nation="Japan" data-shipType="CRUISER" data-ship="PJSC009">8 - Mogami</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSC012">
+                                        <span data-nation="Japan" data-shipType="CRUISER" data-ship="PJSC012">9 - Ibuki</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSC034">
+                                        <span data-nation="Japan" data-shipType="CRUISER" data-ship="PJSC034">10 - Zaō</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Destroyer</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PJSD002">
+                                        <span data-nation="Japan" data-shipType="DESTROYER" data-ship="PJSD002">2 - Umikaze</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSD024">
+                                        <span data-nation="Japan" data-shipType="DESTROYER" data-ship="PJSD024">3 - Wakatake</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSD003">
+                                        <span data-nation="Japan" data-shipType="DESTROYER" data-ship="PJSD003">4 - Isokaze</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSD105">
+                                        <span data-nation="Japan" data-shipType="DESTROYER" data-ship="PJSD105">5 - Mutsuki</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PJSD004">
+                                        <span data-nation="Japan" data-shipType="DESTROYER" data-ship="PJSD004">5 - Minekaze</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSD106">
+                                        <span data-nation="Japan" data-shipType="DESTROYER" data-ship="PJSD106">6 - Fubuki</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PJSD206">
+                                        <span data-nation="Japan" data-shipType="DESTROYER" data-ship="PJSD206">6 - Hatsuharu</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSD107">
+                                        <span data-nation="Japan" data-shipType="DESTROYER" data-ship="PJSD107">7 - Akatsuki</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PJSD207">
+                                        <span data-nation="Japan" data-shipType="DESTROYER" data-ship="PJSD207">7 - Shiratsuyu</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSD208">
+                                        <span data-nation="Japan" data-shipType="DESTROYER" data-ship="PJSD208">8 - Kagerō</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PJSD108">
+                                        <span data-nation="Japan" data-shipType="DESTROYER" data-ship="PJSD108">8 - Akizuki</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSD209">
+                                        <span data-nation="Japan" data-shipType="DESTROYER" data-ship="PJSD209">9 - Yūgumo</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PJSD219">
+                                        <span data-nation="Japan" data-shipType="DESTROYER" data-ship="PJSD219">9 - Kitakaze</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PJSD012">
+                                        <span data-nation="Japan" data-shipType="DESTROYER" data-ship="PJSD012">10 - Shimakaze</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PJSD210">
+                                        <span data-nation="Japan" data-shipType="DESTROYER" data-ship="PJSD210">10 - Harugumo</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Premium</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Aircraft Carrier</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PJSA518">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSA518">8 - Kaga</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Battleship</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PJSB011">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSB011">2 - Mikasa</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSB008">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSB008">4 - Ishizuchi</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSB506">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSB506">6 - Mutsu</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSB507">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSB507">7 - Ashitaka</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSB508">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSB508">8 - Kii</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PJSB878">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSB878">8 - Ignis Purgatio</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PJSB888">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSB888">8 - Ragnarok</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSB509">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSB509">9 - Musashi</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSB510">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSB510">10 - Shikishima</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Cruiser</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PJSC503">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSC503">3 - Katori</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSC004">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSC004">4 - Yūbari</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PJSC026">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSC026">4 - Iwaki Alpha</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSC505">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSC505">5 - Yahagi</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSC717">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSC717">7 - Southern Dragon</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PJSC727">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSC727">7 - Eastern Dragon</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSC038">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSC038">8 - Atago</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PJSC598">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSC598">8 - Atago B</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSC510">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSC510">9 - Azuma</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSC520">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSC520">10 - Yoshino</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Destroyer</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PJSD001">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSD001">2 - Tachibana</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PJSD014">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSD014">2 - Tachibana Lima</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSD017">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSD017">5 - Fūjin</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PJSD025">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSD025">5 - Kamikaze</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PJSD026">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSD026">5 - Kamikaze R</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSD706">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSD706">6 - Shinonome</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSD507">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSD507">7 - Yūdachi</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSD518">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSD518">8 - Asashio</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PJSD598">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSD598">8 - Asashio B</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PJSD708">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSD708">8 - HSF Harekaze</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PJSD718">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSD718">8 - AL Yukikaze</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PJSD510">
+                                            <span data-nation="Japan" data-shipType="FILTER_PREMIUM" data-ship="PJSD510">10 - Hayate</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span>Test Ship</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Aircraft Carrier</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PJSA917">
+                                            <span data-nation="Japan" data-shipType="TEST_SAMPLE" data-ship="PJSA917">10 - [Hakuryū]</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Cruiser</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PJSC014">
+                                            <span data-nation="Japan" data-shipType="TEST_SAMPLE" data-ship="PJSC014">10 - Kitakami</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Destroyer</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PJSD998">
+                                            <span data-nation="Japan" data-shipType="TEST_SAMPLE" data-ship="PJSD998">8 - Arashi</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nation">
+            <span>Pan-America</span>
+            <div class="dropdown_main">
+                <div>
+                    <span>Premium</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Cruiser</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PVSC507">
+                                            <span data-nation="Pan_America" data-shipType="FILTER_PREMIUM" data-ship="PVSC507">7 - Nueve de Julio</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nation">
+            <span>Pan-Asia</span>
+            <div class="dropdown_main">
+                <div>
+                    <span>Cruiser</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PZSC101">
+                                        <span data-nation="Pan_Asia" data-shipType="CRUISER" data-ship="PZSC101">1 - Chengan</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Destroyer</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PZSD102">
+                                        <span data-nation="Pan_Asia" data-shipType="DESTROYER" data-ship="PZSD102">2 - Longjiang</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PZSD103">
+                                        <span data-nation="Pan_Asia" data-shipType="DESTROYER" data-ship="PZSD103">3 - Phra Ruang</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PZSD104">
+                                        <span data-nation="Pan_Asia" data-shipType="DESTROYER" data-ship="PZSD104">4 - Shenyang</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PZSD105">
+                                        <span data-nation="Pan_Asia" data-shipType="DESTROYER" data-ship="PZSD105">5 - Jianwei</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PZSD106">
+                                        <span data-nation="Pan_Asia" data-shipType="DESTROYER" data-ship="PZSD106">6 - Fushun</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PZSD107">
+                                        <span data-nation="Pan_Asia" data-shipType="DESTROYER" data-ship="PZSD107">7 - Gadjah Mada</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PZSD108">
+                                        <span data-nation="Pan_Asia" data-shipType="DESTROYER" data-ship="PZSD108">8 - Hsienyang</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PZSD109">
+                                        <span data-nation="Pan_Asia" data-shipType="DESTROYER" data-ship="PZSD109">9 - Chung Mu</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PZSD110">
+                                        <span data-nation="Pan_Asia" data-shipType="DESTROYER" data-ship="PZSD110">10 - Yueyang</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Premium</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Battleship</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PZSB509">
+                                            <span data-nation="Pan_Asia" data-shipType="FILTER_PREMIUM" data-ship="PZSB509">9 - Bajie</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Cruiser</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PZSC506">
+                                            <span data-nation="Pan_Asia" data-shipType="FILTER_PREMIUM" data-ship="PZSC506">6 - Huanghe</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PZSC508">
+                                            <span data-nation="Pan_Asia" data-shipType="FILTER_PREMIUM" data-ship="PZSC508">8 - Irian</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PZSC518">
+                                            <span data-nation="Pan_Asia" data-shipType="FILTER_PREMIUM" data-ship="PZSC518">8 - Wukong</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Destroyer</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PZSD506">
+                                            <span data-nation="Pan_Asia" data-shipType="FILTER_PREMIUM" data-ship="PZSD506">6 - Anshan</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PZSD208">
+                                            <span data-nation="Pan_Asia" data-shipType="FILTER_PREMIUM" data-ship="PZSD208">8 - Siliwangi</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PZSD508">
+                                            <span data-nation="Pan_Asia" data-shipType="FILTER_PREMIUM" data-ship="PZSD508">8 - Loyang</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nation">
+            <span>U.S.A.</span>
+            <div class="dropdown_main">
+                <div>
+                    <span>Aircraft Carrier</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PASA104">
+                                        <span data-nation="USA" data-shipType="AIRCARRIER" data-ship="PASA104">4 - Langley</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASA106">
+                                        <span data-nation="USA" data-shipType="AIRCARRIER" data-ship="PASA106">6 - Ranger</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASA108">
+                                        <span data-nation="USA" data-shipType="AIRCARRIER" data-ship="PASA108">8 - Lexington</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASA110">
+                                        <span data-nation="USA" data-shipType="AIRCARRIER" data-ship="PASA110">10 - Midway</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Battleship</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PASB001">
+                                        <span data-nation="USA" data-shipType="BATTLESHIP" data-ship="PASB001">3 - South Carolina</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASB004">
+                                        <span data-nation="USA" data-shipType="BATTLESHIP" data-ship="PASB004">4 - Wyoming</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASB006">
+                                        <span data-nation="USA" data-shipType="BATTLESHIP" data-ship="PASB006">5 - New York</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASB034">
+                                        <span data-nation="USA" data-shipType="BATTLESHIP" data-ship="PASB034">6 - New Mexico</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASB008">
+                                        <span data-nation="USA" data-shipType="BATTLESHIP" data-ship="PASB008">7 - Colorado</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASB012">
+                                        <span data-nation="USA" data-shipType="BATTLESHIP" data-ship="PASB012">8 - North Carolina</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASB018">
+                                        <span data-nation="USA" data-shipType="BATTLESHIP" data-ship="PASB018">9 - Iowa</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASB017">
+                                        <span data-nation="USA" data-shipType="BATTLESHIP" data-ship="PASB017">10 - Montana</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Cruiser</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PASC001">
+                                        <span data-nation="USA" data-shipType="CRUISER" data-ship="PASC001">1 - Erie</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASC002">
+                                        <span data-nation="USA" data-shipType="CRUISER" data-ship="PASC002">2 - Chester</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASC004">
+                                        <span data-nation="USA" data-shipType="CRUISER" data-ship="PASC004">3 - St. Louis</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASC024">
+                                        <span data-nation="USA" data-shipType="CRUISER" data-ship="PASC024">4 - Phoenix</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASC005">
+                                        <span data-nation="USA" data-shipType="CRUISER" data-ship="PASC005">5 - Omaha</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASC106">
+                                        <span data-nation="USA" data-shipType="CRUISER" data-ship="PASC106">6 - Pensacola</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PASC206">
+                                        <span data-nation="USA" data-shipType="CRUISER" data-ship="PASC206">6 - Dallas</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASC107">
+                                        <span data-nation="USA" data-shipType="CRUISER" data-ship="PASC107">7 - New Orleans</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PASC207">
+                                        <span data-nation="USA" data-shipType="CRUISER" data-ship="PASC207">7 - Helena</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASC108">
+                                        <span data-nation="USA" data-shipType="CRUISER" data-ship="PASC108">8 - Baltimore</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PASC208">
+                                        <span data-nation="USA" data-shipType="CRUISER" data-ship="PASC208">8 - Cleveland</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASC109">
+                                        <span data-nation="USA" data-shipType="CRUISER" data-ship="PASC109">9 - Buffalo</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PASC209">
+                                        <span data-nation="USA" data-shipType="CRUISER" data-ship="PASC209">9 - Seattle</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASC020">
+                                        <span data-nation="USA" data-shipType="CRUISER" data-ship="PASC020">10 - Des Moines</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PASC210">
+                                        <span data-nation="USA" data-shipType="CRUISER" data-ship="PASC210">10 - Worcester</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Destroyer</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PASD002">
+                                        <span data-nation="USA" data-shipType="DESTROYER" data-ship="PASD002">2 - Sampson</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASD027">
+                                        <span data-nation="USA" data-shipType="DESTROYER" data-ship="PASD027">3 - Wickes</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASD019">
+                                        <span data-nation="USA" data-shipType="DESTROYER" data-ship="PASD019">4 - Clemson</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASD014">
+                                        <span data-nation="USA" data-shipType="DESTROYER" data-ship="PASD014">5 - Nicholas</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASD005">
+                                        <span data-nation="USA" data-shipType="DESTROYER" data-ship="PASD005">6 - Farragut</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASD006">
+                                        <span data-nation="USA" data-shipType="DESTROYER" data-ship="PASD006">7 - Mahan</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASD008">
+                                        <span data-nation="USA" data-shipType="DESTROYER" data-ship="PASD008">8 - Benson</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASD021">
+                                        <span data-nation="USA" data-shipType="DESTROYER" data-ship="PASD021">9 - Fletcher</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PASD013">
+                                        <span data-nation="USA" data-shipType="DESTROYER" data-ship="PASD013">10 - Gearing</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Premium</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Aircraft Carrier</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PASA518">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASA518">8 - Enterprise</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASA528">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASA528">8 - Saipan</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Battleship</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PASB013">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASB013">4 - Arkansas Beta</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASB705">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASB705">5 - Texas</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASB506">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASB506">6 - Arizona</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASB507">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASB507">6 - W. Virginia 1941</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASB707">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASB707">7 - California</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASB508">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASB508">8 - Alabama</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASB518">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASB518">8 - Massachusetts</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASB598">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASB598">8 - Massachusetts B</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASB708">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASB708">8 - Alabama ST</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASB509">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASB509">9 - Missouri</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASB729">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASB729">9 - Georgia</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASB510">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASB510">10 - Ohio</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Cruiser</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PASC003">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASC003">2 - Albany</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASC503">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASC503">3 - Charleston</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASC044">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASC044">5 - Marblehead</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASC045">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASC045">5 - Marblehead Lima</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASC006">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASC006">7 - Atlanta</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASC507">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASC507">7 - Indianapolis</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASC597">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASC597">7 - Boise</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASC707">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASC707">7 - Flint</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASC508">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASC508">8 - Wichita</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASC518">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASC518">8 - Anchorage</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASC718">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASC718">8 - AL Montpelier</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASC510">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASC510">9 - Alaska</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASC599">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASC599">9 - Alaska B</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASC610">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASC610">10 - Puerto Rico</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASC710">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASC710">10 - Salem</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Destroyer</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PASD502">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASD502">2 - Smith</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASD505">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASD505">5 - Hill</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASD506">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASD506">6 - Monaghan</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASD029">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASD029">7 - Sims</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASD597">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASD597">7 - Sims B</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASD508">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASD508">8 - Kidd</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASD509">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASD509">9 - Benham</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASD709">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASD709">9 - Black</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASD510">
+                                            <span data-nation="USA" data-shipType="FILTER_PREMIUM" data-ship="PASD510">10 - Somers</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span>Test Ship</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Aircraft Carrier</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PASA510">
+                                            <span data-nation="USA" data-shipType="TEST_SAMPLE" data-ship="PASA510">10 - Franklin D. Roosevelt</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PASA915">
+                                            <span data-nation="USA" data-shipType="TEST_SAMPLE" data-ship="PASA915">10 - [Midway]</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Battleship</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PASB505">
+                                            <span data-nation="USA" data-shipType="TEST_SAMPLE" data-ship="PASB505">5 - Oklahoma</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASB517">
+                                            <span data-nation="USA" data-shipType="TEST_SAMPLE" data-ship="PASB517">7 - Florida</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASB108">
+                                            <span data-nation="USA" data-shipType="TEST_SAMPLE" data-ship="PASB108">8 - Kansas</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASB109">
+                                            <span data-nation="USA" data-shipType="TEST_SAMPLE" data-ship="PASB109">9 - Minnesota</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PASB110">
+                                            <span data-nation="USA" data-shipType="TEST_SAMPLE" data-ship="PASB110">10 - Vermont</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nation">
+            <span>U.K.</span>
+            <div class="dropdown_main">
+                <div>
+                    <span>Aircraft Carrier</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PBSA204">
+                                        <span data-nation="United_Kingdom" data-shipType="AIRCARRIER" data-ship="PBSA204">4 - Hermes</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSA106">
+                                        <span data-nation="United_Kingdom" data-shipType="AIRCARRIER" data-ship="PBSA106">6 - Furious</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSA108">
+                                        <span data-nation="United_Kingdom" data-shipType="AIRCARRIER" data-ship="PBSA108">8 - Implacable</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSA210">
+                                        <span data-nation="United_Kingdom" data-shipType="AIRCARRIER" data-ship="PBSA210">10 - Audacious</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Battleship</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PBSB103">
+                                        <span data-nation="United_Kingdom" data-shipType="BATTLESHIP" data-ship="PBSB103">3 - Bellerophon</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSB104">
+                                        <span data-nation="United_Kingdom" data-shipType="BATTLESHIP" data-ship="PBSB104">4 - Orion</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSB105">
+                                        <span data-nation="United_Kingdom" data-shipType="BATTLESHIP" data-ship="PBSB105">5 - Iron Duke</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSB106">
+                                        <span data-nation="United_Kingdom" data-shipType="BATTLESHIP" data-ship="PBSB106">6 - Queen Elizabeth</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSB107">
+                                        <span data-nation="United_Kingdom" data-shipType="BATTLESHIP" data-ship="PBSB107">7 - King George V</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSB108">
+                                        <span data-nation="United_Kingdom" data-shipType="BATTLESHIP" data-ship="PBSB108">8 - Monarch</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSB109">
+                                        <span data-nation="United_Kingdom" data-shipType="BATTLESHIP" data-ship="PBSB109">9 - Lion</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSB110">
+                                        <span data-nation="United_Kingdom" data-shipType="BATTLESHIP" data-ship="PBSB110">10 - Conqueror</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Cruiser</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PBSC101">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC101">1 - Black Swan</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSC102">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC102">2 - Weymouth</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSC103">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC103">3 - Caledon</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSC104">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC104">4 - Danae</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSC105">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC105">5 - Emerald</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PBSC205">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC205">5 - Hawkins</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSC106">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC106">6 - Leander</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PBSC206">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC206">6 - Devonshire</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSC107">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC107">7 - Fiji</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PBSC207">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC207">7 - Surrey</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSC108">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC108">8 - Edinburgh</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PBSC208">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC208">8 - Albemarle</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSC109">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC109">9 - Neptune</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PBSC209">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC209">9 - Drake</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSC110">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC110">10 - Minotaur</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PBSC210">
+                                        <span data-nation="United_Kingdom" data-shipType="CRUISER" data-ship="PBSC210">10 - Goliath</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Destroyer</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PBSD102">
+                                        <span data-nation="United_Kingdom" data-shipType="DESTROYER" data-ship="PBSD102">2 - Medea</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSD103">
+                                        <span data-nation="United_Kingdom" data-shipType="DESTROYER" data-ship="PBSD103">3 - Valkyrie</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSD104">
+                                        <span data-nation="United_Kingdom" data-shipType="DESTROYER" data-ship="PBSD104">4 - Wakeful</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSD105">
+                                        <span data-nation="United_Kingdom" data-shipType="DESTROYER" data-ship="PBSD105">5 - Acasta</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSD106">
+                                        <span data-nation="United_Kingdom" data-shipType="DESTROYER" data-ship="PBSD106">6 - Icarus</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSD107">
+                                        <span data-nation="United_Kingdom" data-shipType="DESTROYER" data-ship="PBSD107">7 - Jervis</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSD108">
+                                        <span data-nation="United_Kingdom" data-shipType="DESTROYER" data-ship="PBSD108">8 - Lightning</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSD109">
+                                        <span data-nation="United_Kingdom" data-shipType="DESTROYER" data-ship="PBSD109">9 - Jutland</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PBSD110">
+                                        <span data-nation="United_Kingdom" data-shipType="DESTROYER" data-ship="PBSD110">10 - Daring</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Premium</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Aircraft Carrier</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PBSA518">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSA518">6 - Ark Royal</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PBSA508">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSA508">8 - Indomitable</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Battleship</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PBSB503">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSB503">3 - Dreadnought</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PBSB002">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSB002">6 - Warspite</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PBSB507">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSB507">7 - Hood</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PBSB517">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSB517">7 - Nelson</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PBSB527">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSB527">7 - Duke of York</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PBSB508">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSB508">8 - Vanguard</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PBSB510">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSB510">10 - Thunderer</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Cruiser</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PBSC505">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSC505">5 - Exeter</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PBSC516">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSC516">6 - London</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PBSC507">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSC507">7 - Belfast</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PBSC508">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSC508">8 - Cheshire</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Destroyer</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PBSD503">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSD503">3 - Campbeltown</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PBSD506">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSD506">6 - Gallant</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PBSD517">
+                                            <span data-nation="United_Kingdom" data-shipType="FILTER_PREMIUM" data-ship="PBSD517">8 - Cossack</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span>Test Ship</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Aircraft Carrier</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PBSA910">
+                                            <span data-nation="United_Kingdom" data-shipType="TEST_SAMPLE" data-ship="PBSA910">10 - [Audacious]</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Cruiser</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PBSC528">
+                                            <span data-nation="United_Kingdom" data-shipType="TEST_SAMPLE" data-ship="PBSC528">8 - Belfast &#39;43</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nation">
+            <span>U.S.S.R.</span>
+            <div class="dropdown_main">
+                <div>
+                    <span>Battleship</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PRSB103">
+                                        <span data-nation="Russia" data-shipType="BATTLESHIP" data-ship="PRSB103">3 - Knyaz Suvorov</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSB104">
+                                        <span data-nation="Russia" data-shipType="BATTLESHIP" data-ship="PRSB104">4 - Gangut</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSB105">
+                                        <span data-nation="Russia" data-shipType="BATTLESHIP" data-ship="PRSB105">5 - Pyotr Velikiy</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSB106">
+                                        <span data-nation="Russia" data-shipType="BATTLESHIP" data-ship="PRSB106">6 - Izmail</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSB107">
+                                        <span data-nation="Russia" data-shipType="BATTLESHIP" data-ship="PRSB107">7 - Sinop</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSB108">
+                                        <span data-nation="Russia" data-shipType="BATTLESHIP" data-ship="PRSB108">8 - Vladivostok</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSB109">
+                                        <span data-nation="Russia" data-shipType="BATTLESHIP" data-ship="PRSB109">9 - Sovetsky Soyuz</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSB110">
+                                        <span data-nation="Russia" data-shipType="BATTLESHIP" data-ship="PRSB110">10 - Kremlin</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Cruiser</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PRSC101">
+                                        <span data-nation="Russia" data-shipType="CRUISER" data-ship="PRSC101">1 - Orlan</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSC102">
+                                        <span data-nation="Russia" data-shipType="CRUISER" data-ship="PRSC102">2 - Novik</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSC103">
+                                        <span data-nation="Russia" data-shipType="CRUISER" data-ship="PRSC103">3 - Bogatyr</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSC104">
+                                        <span data-nation="Russia" data-shipType="CRUISER" data-ship="PRSC104">4 - Svietlana</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSC215">
+                                        <span data-nation="Russia" data-shipType="CRUISER" data-ship="PRSC215">5 - Kotovsky</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSC106">
+                                        <span data-nation="Russia" data-shipType="CRUISER" data-ship="PRSC106">6 - Budyonny</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSC107">
+                                        <span data-nation="Russia" data-shipType="CRUISER" data-ship="PRSC107">7 - Shchors</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSC108">
+                                        <span data-nation="Russia" data-shipType="CRUISER" data-ship="PRSC108">8 - Chapayev</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PRSC208">
+                                        <span data-nation="Russia" data-shipType="CRUISER" data-ship="PRSC208">8 - Tallinn</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSC109">
+                                        <span data-nation="Russia" data-shipType="CRUISER" data-ship="PRSC109">9 - Dmitri Donskoi</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PRSC209">
+                                        <span data-nation="Russia" data-shipType="CRUISER" data-ship="PRSC209">9 - Riga</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSC210">
+                                        <span data-nation="Russia" data-shipType="CRUISER" data-ship="PRSC210">10 - Alexander Nevsky</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PRSC310">
+                                        <span data-nation="Russia" data-shipType="CRUISER" data-ship="PRSC310">10 - Petropavlovsk</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Destroyer</span>
+                    <div class="dropdown_sub">
+                        
+                            
+                                
+                                    <a href="/ship?index=PRSD102">
+                                        <span data-nation="Russia" data-shipType="DESTROYER" data-ship="PRSD102">2 - Storozhevoi</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSD103">
+                                        <span data-nation="Russia" data-shipType="DESTROYER" data-ship="PRSD103">3 - Derzki</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSD104">
+                                        <span data-nation="Russia" data-shipType="DESTROYER" data-ship="PRSD104">4 - Izyaslav</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSD205">
+                                        <span data-nation="Russia" data-shipType="DESTROYER" data-ship="PRSD205">5 - Podvoisky</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSD206">
+                                        <span data-nation="Russia" data-shipType="DESTROYER" data-ship="PRSD206">6 - Gnevny</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSD207">
+                                        <span data-nation="Russia" data-shipType="DESTROYER" data-ship="PRSD207">7 - Minsk</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSD308">
+                                        <span data-nation="Russia" data-shipType="DESTROYER" data-ship="PRSD308">8 - Kiev</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PRSD208">
+                                        <span data-nation="Russia" data-shipType="DESTROYER" data-ship="PRSD208">8 - Ognevoi</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSD409">
+                                        <span data-nation="Russia" data-shipType="DESTROYER" data-ship="PRSD409">9 - Tashkent</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PRSD107">
+                                        <span data-nation="Russia" data-shipType="DESTROYER" data-ship="PRSD107">9 - Udaloi</span>
+                                    </a>
+                                
+                            
+                                
+                                    <a href="/ship?index=PRSD110">
+                                        <span data-nation="Russia" data-shipType="DESTROYER" data-ship="PRSD110">10 - Khabarovsk</span>
+                                    </a>
+                                
+                                    <a href="/ship?index=PRSD210">
+                                        <span data-nation="Russia" data-shipType="DESTROYER" data-ship="PRSD210">10 - Grozovoi</span>
+                                    </a>
+                                
+                            
+                        
+                    </div>
+                    
+                </div>
+                <div>
+                    <span>Premium</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Battleship</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PRSB001">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSB001">4 - Imperator Nikolai I</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PRSB505">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSB505">5 - Oktyabrskaya Revolutsiya</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PRSB508">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSB508">7 - Poltava</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PRSB518">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSB518">8 - Lenin</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PRSB709">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSB709">9 - AL Sov. Rossiya</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PRSB510">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSB510">10 - Slava</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Cruiser</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PRSC002">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC002">2 - Diana</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PRSC010">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC010">2 - Diana Lima</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PRSC001">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC001">3 - Aurora</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PRSC503">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC503">3 - Oleg</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PRSC513">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC513">3 - Varyag</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PRSC003">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC003">5 - Murmansk</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PRSC505">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC505">5 - Krasny Krym</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PRSC515">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC515">5 - Mikoyan</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PRSC525">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC525">5 - Kirov</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PRSC506">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC506">6 - Molotov</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PRSC518">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC518">7 - Lazo</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PRSC508">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC508">8 - Mikhail Kutuzov</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PRSC528">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC528">8 - Ochakov</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PRSC538">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC538">8 - Pyotr Bagration</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PRSC509">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC509">9 - Kronshtadt</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PRSC110">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC110">10 - Moskva</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PRSC510">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC510">10 - Stalingrad</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PRSC610">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSC610">10 - Smolensk</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Destroyer</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PRSD001">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSD001">5 - Gremyashchy</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PRSD505">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSD505">5 - Okhotnik</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PRSD507">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSD507">7 - Leningrad</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PRSD709">
+                                            <span data-nation="Russia" data-shipType="FILTER_PREMIUM" data-ship="PRSD709">9 - Neustrashimy</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span>Test Ship</span>
+                    
+                    <div class="dropdown_main">
+                        <div>
+                            <span>Battleship</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PRSB528">
+                                            <span data-nation="Russia" data-shipType="TEST_SAMPLE" data-ship="PRSB528">8 - Borodino</span>
+                                        </a>
+                                    
+                                        <a href="/ship?index=PRSB538">
+                                            <span data-nation="Russia" data-shipType="TEST_SAMPLE" data-ship="PRSB538">8 - V. I. Lenin</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Cruiser</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PRSC606">
+                                            <span data-nation="Russia" data-shipType="TEST_SAMPLE" data-ship="PRSC606">6 - Admiral Makarov</span>
+                                        </a>
+                                    
+                                
+                                    
+                                        <a href="/ship?index=PRSC520">
+                                            <span data-nation="Russia" data-shipType="TEST_SAMPLE" data-ship="PRSC520">10 - STALINGRAD #2</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                        <div>
+                            <span>Destroyer</span>
+                            <div class="dropdown_sub">
+                                
+                                    
+                                        <a href="/ship?index=PRSD810">
+                                            <span data-nation="Russia" data-shipType="TEST_SAMPLE" data-ship="PRSD810">10 - DD R-10</span>
+                                        </a>
+                                    
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="aa.js"></script>
+<script src="arty.js"></script>
+<script src="torp.js"></script>
+<script src="common.js"></script>
+<script src="touch.js"></script>
+<script src="ship.js"></script>
+<script>
+//    <![CDATA[
+    const compare = false;
+//    ]]>
+</script>
+</body>
+</html>
