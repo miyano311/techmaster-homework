@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>findSumOfCompletelyDividableBy5.js</title>
+</head>
+<body>
+
+	<script>
+		var result1;
+    
+		// this function finds the sum of all integer values in the range of 0-100 that are completely dividable by 5
+		function findSumOfCompletelyDividableBy5() {
+			var i = 0;
+			var output = 0;
+			while (i < 101) {
+				if (i % 5 == 0)
+					output += i;
+				i++;
+			}
+
+			return output;
+		}
+
+		result1 = findSumOfCompletelyDividableBy5();
+
+		console.log(result1);
+  	</script>
+
+</body>
+</html>

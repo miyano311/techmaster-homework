@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>checkPalindromeString.js</title>
+</head>
+<body>
+
+	<script>
+		var result1 = "";
+		var result2 = "";
+    
+		// this function checks if a string is palindrome or not (while ignoring spacing and capitalization)
+		function checkPalindromeString(input) {
+			input = input.toLowerCase();
+			var i = 0;
+			var temp = "";
+			var arr = input.split(" ");
+			while ( i < arr.length ){
+				temp += arr[i];
+				i++;
+			}
+
+			arr = temp.split("");
+			var mid = Math.floor(arr.length / 2);
+			var j = 0;
+			var isPalindrome = true;
+			while ( j < mid ) {
+				if ( arr[j] !== arr[arr.length - (j+1)]) {
+					isPalindrome = false;
+					break;
+				}
+				j++;
+			}
+      
+			return isPalindrome;
+		}
+
+		result1 = checkPalindromeString("Muda adum");
+		result2 = checkPalindromeString("sLAvA tOO bAlaNS FOr yOU");
+
+		console.log(result1);
+		console.log(result2);
+  	</script>
+
+</body>
+</html>

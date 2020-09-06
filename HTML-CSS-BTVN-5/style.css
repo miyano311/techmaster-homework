@@ -9,6 +9,7 @@
 	main {
 		padding-left: 20px;
 		padding-top: 20px;
+		padding-right: 20px;
 	}
 
 	.big-text {
@@ -22,14 +23,25 @@
 		font-size: 20px;
 	}
 	
-	.footer-text {
-		padding: 20px 10%;
-		word-break: keep-all;
-		--ms-word-wrap: break-word;
-		word-wrap: break-word;
+	.small-text li {
+		text-align: left;
+		padding-left: 20px;
 	}
 
-/* class="topnav" */	
+	.white {
+		color: white;
+	}
+	
+	.footer-text {
+		background-color: #bde3dc;
+		border-style: solid;
+		border-width: 2px;
+		padding: 20px 10px 50px 10%;
+		margin: 6% 10% 0 10%;
+		font-family: arial;
+	}
+
+/* navbar */	
 	.topnav {
 		background-color: #333;
 		overflow: hidden;
@@ -54,40 +66,27 @@
 		color: white;
 	}
 	
-/* class="container" and other related classes */
-	.container {
-		max-width: 1000px;
-		margin-left: auto;
-		margin-right: auto;
-		overflow: auto;
-	}
-		
-	.item-wrapper {
-		position: relative;
-		float: left;
-		width: 33%;
-		padding: 10px 10px;
-	}
+/* container for placing items */
 				
 	.overlay {
 		position: absolute;
-		top: 0;
+		top: 15%;
 		bottom: 0;
-		left: 0;
+		left: 15%;
 		right: 0;
-		height: 100%;
-		width: 100%;
+		height: 70%;
+		width: 70%;
 		opacity: 0;
 		transition: .5s ease;
-		background-color: #008CBA;
-		}
+		background-color: #212444;
+	}
 		
-	.item-wrapper:hover .overlay {
+	.col a:hover .overlay {
 		opacity: 0.9;
 	}
 
-	.text {
-		color: black;
+	.overlay-text {
+		color: white;
 		font-size: 30px;
 		position: absolute;
 		top: 50%;
@@ -97,20 +96,36 @@
 		transform: translate(-50%, -50%);
 		text-align: center;
 	}
+	
+/* flexbox */
+	.row {  
+		display: flex;
+		flex-wrap: wrap;
+		padding-top: 20px;
+	}
 
-	img {
+	.col {
+		position: relative;
+		flex: 40%;
+	}
+
+	.gap {
+		width: 15px;
+	}
+
+	.col img {
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
-		max-width: 128px;
+		width: 70%;
+		height: auto;
 	}
-	
 
-/*	body.bgm-image {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/USS-Enterprise-CV-6.jpg");
+/* website background*/
+	body.bgm-image {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/USS-Enterprise-CV-6-2.jpg");
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-attachment: fixed; 
 	}
-*/

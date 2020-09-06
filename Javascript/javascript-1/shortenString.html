@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>shortenString.js</title>
+</head>
+<body>
+
+	<script>
+		var result1 = "";
+		var result2 = "";
+    
+		// this function cuts the input string and returns the first 8 characters of the string
+		function shortenString(input) {
+			return input.slice(0,8);
+		}
+
+		result1 = shortenString("Reimu Bakarei");
+		result2 = shortenString("Hakurei Reimu");
+
+		console.log(result1);
+		console.log(result2);
+  	</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>multiplyString.js</title>
+</head>
+<body>
+
+	<script>
+		var result1 = "";
+		var result2 = "";
+    
+		// this function multiplies a string by 10 times
+		function multiplyString(input) {
+			var output = "";
+			var i = 0;
+			while ( i < 10) {
+				output += input;
+				i++;
+			}
+
+			return output;
+		}
+
+		result1 = multiplyString("Ora");
+		result2 = multiplyString("Muda");
+
+		console.log(result1);
+		console.log(result2);
+  	</script>
+
+</body>
+</html>

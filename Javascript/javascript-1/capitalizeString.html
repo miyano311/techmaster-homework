@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>capitalizeString.js</title>
+</head>
+<body>
+
+	<script>
+		var result1 = "";
+		var result2 = "";
+    
+		// this function converts characters in a string so that only the first characters of words inside the string are ccapitalized.
+		function capitalizeString(input) {
+			input = input.toLowerCase();
+
+			var i = 0;
+			var output = "";
+			var arr = input.split("");
+			arr[i] = arr[i].toUpperCase();
+			while ( i < arr.length){
+				output += arr[i];
+				if ( arr[i] === " ") {
+					arr[i+1] = arr[i+1].toUpperCase();  
+				}
+				i++;
+			}
+      
+			return output;
+		}
+
+		result1 = capitalizeString("reiMu baKarei");
+		result2 = capitalizeString("sLAvA tOO bAlaNS FOr yOU");
+
+		console.log(result1);
+		console.log(result2);
+  	</script>
+
+</body>
+</html>

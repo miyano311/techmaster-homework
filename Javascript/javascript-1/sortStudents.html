@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>sortStudents.js</title>
+</head>
+<body>
+
+	<script>
+		var result1 = "";
+		var result2 = "";
+    
+		// this function sorts students' names in an array in Z-A order
+		function sortStudents(inputArr) {
+			inputArr.sort();
+			inputArr.reverse();
+			return inputArr;
+		}
+
+		result1 = sortStudents(['Gearing','Shimakaze','Daring']);
+		result2 = sortStudents(['Lexington','Saratoga','Ranger','Yorktown','Enterprise','Hornet']);
+
+		console.log(result1);
+		console.log(result2);
+  	</script>
+
+</body>
+</html>

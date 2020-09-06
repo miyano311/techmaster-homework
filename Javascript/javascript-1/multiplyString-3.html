@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>multiplyString-3.js</title>
+</head>
+<body>
+
+	<script>
+		var result1 = "";
+		var result2 = "";
+    
+		// this function multiplies a string by a number of times defined via the input
+		function multiplyString3(input, num) {
+			var output = "";
+			var i = 0;
+			while ( i < num ) {
+				output += input;
+				i++;
+				if ( i < num )
+					output += "-";
+			}
+
+			return output;
+		}
+
+		result1 = multiplyString3("Ora", 15);
+		result2 = multiplyString3("Muda", 20);
+
+		console.log(result1);
+		console.log(result2);
+  	</script>
+
+</body>
+</html>

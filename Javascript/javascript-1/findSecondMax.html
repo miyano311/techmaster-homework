@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>findSecondMax.js</title>
+</head>
+<body>
+
+	<script>
+		var result1 = "";
+		var result2 = "";
+    
+		// this function finds the second highest value in an array of integers
+		function findSecondMax(inputArr) {
+			inputArr.sort();
+			inputArr.reverse();
+			var i = 0;
+			var output = inputArr[i];
+			while (i < inputArr.length) {
+				i++;
+				if (output > inputArr[i]) {
+					output = inputArr[i];
+					break;
+				}
+			}
+			return output;
+		}
+
+		result1 = findSecondMax([6,2,3]);
+		result2 = findSecondMax([6,3,7,7,7,0,5]);
+
+		console.log(result1);
+		console.log(result2);
+  	</script>
+
+</body>
+</html>

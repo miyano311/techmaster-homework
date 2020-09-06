@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>findRemainderOf2.js</title>
+</head>
+<body>
+
+	<script>
+		var result1 = [];
+		var result2 = [];
+    
+		// this function finds the longest strings in an array
+		function findLongestStringInArray(inputArr) {
+			var outputArr = [];
+			var i = 0;
+			var maxStrLength = 0;
+			while (i < inputArr.length) {
+				if (maxStrLength < inputArr[i].length)
+					maxStrLength = inputArr[i].length;
+				i++;
+			}
+
+			i = 0;
+			while (i < inputArr.length) {
+				if (inputArr[i].length == maxStrLength)
+					outputArr.push(inputArr[i]);
+				i++;
+			}
+
+			return outputArr;
+		}
+
+		result1 = findLongestStringInArray(['Gearing','Shimakaze','Shimakaze','Daring']);
+		result2 = findLongestStringInArray(['Gearing','Shimakaze','Shimakaze','Daring','Kitakamem']);
+
+		console.log(result1);
+		console.log(result2);
+  	</script>
+
+</body>
+</html>

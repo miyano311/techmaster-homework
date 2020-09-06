@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>multiplyString-2.js</title>
+</head>
+<body>
+
+	<script>
+		var result1 = "";
+		var result2 = "";
+    
+		// this function multiplies a string by 10 times, adding "-" between pieces of output string
+		function multiplyString2(input) {
+			var output = "";
+			var i = 0;
+			while ( i < 10 ) {
+				output += input;
+				i++;
+				if ( i < 10 )
+					output += "-";
+			}
+
+			return output;
+		}
+
+		result1 = multiplyString2("Ora");
+		result2 = multiplyString2("Muda");
+
+		console.log(result1);
+		console.log(result2);
+  	</script>
+
+</body>
+</html>

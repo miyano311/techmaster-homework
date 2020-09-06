@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>checkStringExist.js</title>
+</head>
+<body>
+
+	<script>
+		var result1 = "";
+		var result2 = "";
+    
+		function checkStringExist(str1, str2) {
+			return str1.includes(str2);
+		}
+
+		result1 = checkStringExist("Reimu Hakurei", "Reimu");
+		result2 = checkStringExist("Reimu Hakurei", "Baka");
+
+		console.log(result1);
+		console.log(result2);
+  	</script>
+
+</body>
+</html>
