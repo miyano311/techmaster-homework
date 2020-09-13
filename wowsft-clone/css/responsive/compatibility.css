@@ -65,29 +65,27 @@ body::-webkit-scrollbar {
     display: inline-block;
 }
 
-.top li:hover, .top li.active {
+.top li:hover, .top li:active {
     background: deepskyblue;
     cursor: pointer;
 }
 
-.top li a {
+.top li a:not(#patreon) {
     display: block;
     padding: 16px;
 }
 
-/*
 a#patreon {
     display: block;
     margin: 8px;
     padding: 8px;
-    /*border-radius: 9999px;
+    /*border-radius: 9999px;*/
     background-color: rgb(232, 91, 70);
 }
 
 a#patreon span {
     color: white;
 }
-*/
 
 img#logo {
     width: 90%;
@@ -166,11 +164,11 @@ main#arty {
 }
 
 .shipsList_top.contract::after {
-    content: ' ▲';
+    content: ' â–²';
 }
 
 .shipsList_top.expand::after {
-    content: ' ▼';
+    content: ' â–¼';
 }
 
 .shipsList_expand .nation {

@@ -77,55 +77,56 @@ Curlew - 6pts
 
 
 - Sakura Empire:
-Azuma (not obtained)
-Shiranui
-Mogami
-I-56
-Ryuujou
-Akashi
-Nagato
-Shiratsuyu
-Agano
-Shouhou
-Yamashiro
-Kirishima
-Hyuuga
-Fusou
-Yukikaze
-Mutsu
-Ise
-Suruga
-Souryuu
-Hiryuu
-Niizuki
-Harutsuki
-Yoizuki
-Sendai
-Jintsuu
-Naka
-Ayanami
-Yuudachi
-Izumo
-Maya
-Zuikaku
-Yuugure
-Houshou
-Shoukaku
-Taihou
-I-19
-I-168
-Ibuki
-Shigure
-Kawakaze
-Yuubari
-Noshiro
-Kasumi
-Kinu
-Isuzu
-Ikazuchi
-Inazuma
-Mikasa (not MLB)
-Kitakaze (not MLB)
+Azuma (not obtained) - 108pts
+Taihou - 26pts
+Izumo - 36pts
+Kitakaze (not MLB) - 49pts
+Shoukaku - 24pts
+Zuikaku - 24pts
+Suruga - 33pts
+Ibuki - 26pts
+Niizuki - 12pts
+Harutsuki - 12pts
+Yoizuki - 12pts
+I-19 - 9pts
+I-168 - 9pts
+I-56 - 6pts
+Kaga (not MLB) - 49pts
+Maya - 21pts
+Mogami - 18pts
+Shiranui - 5pts
+Yukikaze - 13pts
+Nagato - 27pts
+Mutsu - 24pts
+Akashi - 14pts
+Kasumi - 12pts
+Hiryuu - 16pts
+Souryuu - 16pts
+Ise - 19pts
+Hyuuga - 19pts
+Agano - 12pts
+Noshiro - 14pts
+Shiratsuyu - 7pts
+Shigure - 9pts
+Yuudachi - 12pts
+Kawakaze - 12pts
+Ikazuchi - 7pts
+Inazuma - 7pts
+Ryuujou - 12pts
+Fusou - 16pts
+Yamashiro - 16pts
+Sendai - 8pts
+Jintsuu - 10pts
+Naka - 10pts
+Yuugure - 6pts
+Ayanami - 8pts
+Shouhou - 9pts
+Kirishima - 16pts
+Kinu - 9pts
+Isuzu - 7pts
+Yuubari - 5pts
+Houshou - 9pts
+Mikasa (not MLB) - 24pts
 
 
 

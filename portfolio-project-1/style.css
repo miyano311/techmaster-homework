@@ -1,0 +1,82 @@
+.headerBlock{padding-top: 7rem; padding-bottom: 7rem; text-transform:uppercase;}    
+.headerBlock h3{margin-bottom:.5rem; font-size: 2.85em;}
+.headerBlock p{font-weight: 300; font-size: 1.8em;}
+
+.g-brd-green-left {border-left-color: #ffffff !important;}
+.titleMod{color: #ffffff;background-color: #E0E0E0; text-align:left;}
+.card-header{color: #1c1c1c; background-color: #ffffff;}
+.pButton{background-color: #ffffff;color: #1c1c1c;}    
+.card{border-color: #ffffff;}
+.card-header:first-child {border-top-left-radius: 5px; border-top-right-radius: 5px;}
+.menuLinks{padding:0px;margin-bottom: 1.4rem;background-color: #f3f2e8;text-transform: uppercase; font-weight:400;}
+.menuLinks .nav-link{color: #000;}
+footer a:link,footer a:visited{color: #000; opacity:1;}
+footer{color: #000; opacity:.7;}
+.menuLinks .nav-item{border-bottom:2px solid #f3f2e8;}
+.menuLinks .nav-item.active{border-color:#ffffff;}
+.menuLinks .nav-item:hover{border-color:#ffffff;}
+
+
+.menuLinks .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(204,204,204, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.menuLinks .navbar-toggler {
+	border-color: #000
+} 
+
+.profileName{color: #1c1c1c; background-color: #ffffff;}
+.profile-picture{ border-style:solid;border-radius:50%;width: 11rem; margin-top:-40px;}
+.dropdown-menu{padding:10px;}
+.card li:last-child{border-bottom: solid 0px #cc9900 !important; padding-bottom: 0rem !important;}
+.euserContent{line-height:1.5em !important; min-height:100px; color:#000;}
+body {background-color: #f3f2e8; background-image:none;}
+@media (min-width:1300px){.container{width:1300px;max-width: 1300px;}} 
+#portfolioSubTitle{color: #ffffff;}
+
+#sortable,#sortable1,#sortable2 { list-style-type: none; margin: 0; padding:0;}
+
+.bgm-header {
+	height: 100%;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/HMS-Jervis.jpg"	);
+}
+
+.dropdown-item{padding: 1rem 1.5rem; width: auto; border-left: #ffffff solid 3px;} 
+.dropdown-item:hover{background: rgba(0, 0, 0, 0.1); border-left: #8E8E8E solid 3px;} 
+.dropdown-menu{padding: 0;}
+
+.icon-styling {
+	position: relative;
+	display: inline-block;
+	width: 2.57143rem;
+	height: 2.57143rem;
+	margin-right: 0.14286rem;
+	border-radius: 3px;
+	color: #fff;
+	}
+.icon-styling > i {  position: relative	;
+font-size: 20px;
+  top: 59%;
+  -ms-transform: translateY(-70%);
+      transform: translateY(-70%);
+  z-index: 0; }
+.icon-styling:hover{color: #fff;}
+.icon-styling:visited{color: #fff;}
+
+.label-styling {
+	background-color: #ddd;
+	color: #555;
+	border-radius: 4px;
+	padding: 0.71429rem 1.42857rem;
+}
+
+.user-content {
+	padding-top: 15px;
+	color: #000000;
+}
+
+.user-content .text-styling {
+	line-height: 1.5em;
+	font-family: verdana, geneva, sans-serif;
+	font-size: 12pt;
+}
