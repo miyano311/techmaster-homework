@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>Canvas Practice</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script>
+		const SQRT_OF_2 = Math.sqrt(2);
+		let canvas = document.getElementById("canvas");
+		let c = canvas.getContext('2d');
+
+		canvas.width = innerWidth*0.95;
+		canvas.height = innerHeight*0.95;
+
+		addEventListener("resize", () => {
+			canvas.width = innerWidth;
+			canvas.height = innerHeight;
+		});
+
+		class Square {
+			constructor(centerx, centery, width, color, rotate) {
+				this.centerx = centerx;
+				this.centery = centery;
+				this.rect_width = width;
+				this.color = color;
+				this.rotate = rotate;
+			}
+	
+			draw() {
+				let rect_width = 200;
+				c.fillStyle = this.color;
+
+				if (!this.rotate) {
+					c.fillRect(this.centerx - this.rect_width / 2, this.centery - this.rect_width / 2, this.rect_width, this.rect_width);
+				} else {
+					c.save();
+					c.translate(this.centerx, this.centery);
+					c.rotate(Math.PI / 4);
+					c.fillRect(- this.rect_width / 2, - this.rect_width / 2, this.rect_width, this.rect_width);
+					c.restore();
+				}
+			}
+		}
+
+		function createSquareArray(n) {
+			var output = [];
+			for (let i = 0; i < n; i++) {
+				let tempWidth = 500/Math.pow(SQRT_OF_2,i);
+				let fillColor = '#4472C4';
+				let isRotate = false;
+				if (i % 2 !== 0) {
+					fillColor = "white";
+					isRotate = true;
+				}
+				let tempSquare = new Square(canvas.width / 2, canvas.height / 2, tempWidth, fillColor, isRotate);
+				output.push(tempSquare);
+			}
+			return output;
+		}
+		
+
+		function drawSquare() {
+			requestAnimationFrame(drawSquare);
+			c.clearRect(0, 0, canvas.width, canvas.height);
+			let testArr = createSquareArray(5);
+			for (let i = 0; i < testArr.length; i++) {
+				testArr[i].draw();
+			}
+		}
+
+		drawSquare();
+		
+		window.addEventListener("resize", function() {
+			canvas.width = innerWidth * 0.95;
+			canvas.height = innerHeight * 0.95;
+			drawSquare();
+		})
+		
+
+	</script>
+</body>
+</html>
+

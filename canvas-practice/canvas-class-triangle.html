@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>Canvas Practice</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script>
+		const canvas = document.getElementById("canvas");
+		canvas.width = innerWidth * 0.9;
+		canvas.height = innerHeight * 0.9;
+		canvas.style.border = "solid 4px";
+		
+		const ctx = canvas.getContext("2d");
+
+		class Point {
+			constructor(x,y) {
+				this.x = x;
+				this.y = y;
+			}
+		}
+		
+		class Triangle {
+			constructor(pointA,pointB,pointC) {
+				this.pointA = pointA;
+				this.pointB = pointB;
+				this.pointC = pointC;
+			}
+			
+			draw() {
+				ctx.beginPath();
+				ctx.moveTo(this.pointA.x,this.pointA.y);
+				ctx.lineTo(this.pointB.x,this.pointB.y);
+				ctx.lineTo(this.pointC.x,this.pointC.y);
+				ctx.lineTo(this.pointA.x,this.pointA.y);
+				ctx.stroke();
+				<!-- ctx.font = "30pt Arial"; -->
+				<!-- ctx.textAlign = "center"; -->
+				<!-- ctx.fillText("A",this.pointA.x,this.pointA.y); -->
+				<!-- ctx.fillText("B",this.pointB.x,this.pointB.y); -->
+				<!-- ctx.fillText("C",this.pointC.x,this.pointC.y); -->
+			}
+		}
+		
+		let pointA = new Point(400,100);
+		let pointB = new Point(900,600);
+		let pointC = new Point(200,600);
+		
+		let testTri = new Triangle(pointA,pointB,pointC);
+		testTri.draw();
+		
+		ctx.setLineDash([5, 10]);
+		ctx.strokeStyle = "blue";
+		ctx.beginPath();
+		ctx.moveTo(pointA.x, pointA.y);
+		ctx.lineTo((pointB.x + pointC.x)/2,(pointB.y + pointC.y)/2);
+		ctx.stroke();
+		ctx.beginPath();
+		ctx.moveTo(pointB.x, pointB.y);
+		ctx.lineTo((pointA.x + pointC.x)/2,(pointA.y + pointC.y)/2);
+		ctx.stroke();
+		ctx.beginPath();
+		ctx.moveTo(pointC.x, pointC.y);
+		ctx.lineTo((pointB.x + pointA.x)/2,(pointB.y + pointA.y)/2);
+		ctx.stroke();
+		
+		<!-- function drawRedCross() { -->
+			<!-- ctx.moveTo(0,0); -->
+			<!-- ctx.lineTo(canvas.width,canvas.height); -->
+			<!-- ctx.moveTo(canvas.width,0); -->
+			<!-- ctx.lineTo(0,canvas.height); -->
+			<!-- ctx.strokeStyle = "red"; -->
+			<!-- ctx.stroke(); -->
+		<!-- } -->
+		
+		<!-- drawRedCross(); -->
+		
+		<!-- window.addEventListener("resize", function() { -->
+			<!-- canvas.width = innerWidth * 0.9; -->
+			<!-- canvas.height = innerHeight * 0.9; -->
+			<!-- drawRedCross(); -->
+		<!-- }) -->
+	</script>
+</body>
+</html>

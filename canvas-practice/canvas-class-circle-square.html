@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>Canvas Practice</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script>
+		const canvas = document.getElementById("canvas");
+		canvas.width = innerWidth * 0.9;
+		canvas.height = innerHeight * 0.9;
+		canvas.style.border = "solid 4px";
+		
+		const ctx = canvas.getContext("2d");
+
+		class Point {
+			constructor(x,y) {
+				this.x = x;
+				this.y = y;
+			}
+		}
+		
+		class Circle {
+			constructor(pointCenter,radius) {
+				this.pointCenter = pointCenter;
+				this.radius = radius;
+			}
+			
+			draw() {
+				ctx.beginPath();
+				ctx.arc(this.pointCenter.x,this.pointCenter.y,this.radius,0,2*Math.PI,false);
+				ctx.stroke();
+			}
+		}
+		
+		class Square {
+			constructor(pointStart, width) {
+				this.pointStart = pointStart;
+				this.width = width;
+			}
+			
+			draw() {
+				ctx.beginPath();
+				ctx.rect(this.pointStart.x,this.pointStart.y,this.width,this.width);
+				ctx.stroke();
+			}
+		}
+		
+		let pointA = new Point(700,350);
+		let first = new Circle(pointA,250);
+		first.draw();
+		
+		let pointB = new Point(pointA.x - first.radius/Math.sqrt(2),pointA.y - first.radius/Math.sqrt(2))
+		let second = new Square(pointB,first.radius/Math.sqrt(2)*2);
+		second.draw();
+		
+		let third = new Circle(pointA,first.radius/Math.sqrt(2));
+		third.draw();
+		
+		let pointC = new Point(pointA.x - third.radius/Math.sqrt(2),pointA.y - third.radius/Math.sqrt(2))
+		let fourth = new Square(pointC,third.radius/Math.sqrt(2)*2);
+		fourth.draw();
+
+		let fifth = new Circle(pointA,third.radius/Math.sqrt(2));
+		fifth.draw();
+	</script>
+</body>
+</html>
