@@ -1,5 +1,7 @@
 let arr1 = [1,2,3,4,5];
 let arr2 = [1,2,3,7,8,9,6];
+let arr3 = [7,5,3,1];
+let arr4 = ["Shimakaze","Mogami","Shimakaze","Atago","Shoukaku","Atago","Nagato"];
 
 // this function returns a random element from a given array
 let getRandomElementFromArray = (inputArr) => {
@@ -84,7 +86,9 @@ let findAllSubStrings = (inputStr) => {
 		}
 	}
 	return output;
-} 
+}
+
+console.log(findAllSubStrings("Kremlin"));
 
 // this function checks if the given input array is increasing or not
 let checkIncreasingArray = (inputArr) => {
@@ -96,6 +100,10 @@ let checkIncreasingArray = (inputArr) => {
 	return true;
 }
 
+console.log(checkIncreasingArray(arr1));
+console.log(checkIncreasingArray(arr2));
+
+
 // this function checks if the given input array is decreasing and has only odd numbers or not
 let checkOddDecreasingArray = (inputArr) => {
 	let i = 0;
@@ -106,6 +114,9 @@ let checkOddDecreasingArray = (inputArr) => {
 	}
 	return true;
 }
+
+console.log(checkOddDecreasingArray(arr2));
+console.log(checkOddDecreasingArray(arr3));
 
 // this function returns the smallest integers possible from the characters of a given integer
 let getSmallestInteger = (input) => {
@@ -123,6 +134,8 @@ let getSmallestInteger = (input) => {
 	return intArray.join('');
 }
 
+console.log(getSmallestInteger(503419));
+
 // this function generates a random set of RGB color code
 let generateRandomRGBColor = () => {
 	let output = {
@@ -134,6 +147,8 @@ let generateRandomRGBColor = () => {
 	return output;
 }
 
+console.log(generateRandomRGBColor());
+
 // this function removes any duplicate elements in a given array
 let removeDuplicateElements = (input) => {
 	let output = input.filter((item, index) => {
@@ -141,6 +156,8 @@ let removeDuplicateElements = (input) => {
 	});
 	return output;
 }
+
+console.log(removeDuplicateElements(arr4));
 
 // this function finds all duplicate elements in a given array
 let findDuplicateElements = (input) => {
@@ -150,3 +167,6 @@ let findDuplicateElements = (input) => {
 	output = removeDuplicateElements(output);
 	return output;
 }
+
+console.log(findDuplicateElements(arr4));
+
