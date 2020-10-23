@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="container--wrapper">
+        <h2 class="title text-center">Calculator</h2>
+
+        <!-- Tính toán + Hiện kết quả -->
+        <div class="c_input">
+            <div class="c_ex">
+            </div>
+            <div class="c_result">
+            </div>
+        </div>
+
+        <!-- Danh sách số + biểu thức -->
+        <div class="c_board">
+            <table>
+                <tr>
+                    <td><span class="char screen-input">(</span></td>
+                    <td><span class="char screen-input">)</span></td>
+                    <td><span class="char del">DEL</span></td>
+                    <td colspan="2"><span class="char clear">CLEAR</span></td>
+                </tr>
+                <tr>
+                    <td><span class="number screen-input">7</span></td>
+                    <td><span class="number screen-input">8</span></td>
+                    <td><span class="number screen-input">9</span></td>
+                    <td><span class="char percentage">&percnt;</span></td>
+                    <td><span class="char sqrt">&radic;</span></td>
+                </tr>
+                <tr>
+                    <td><span class="number screen-input">4</span></td>
+                    <td><span class="number screen-input">5</span></td>
+                    <td><span class="number screen-input">6</span></td>
+                    <td><span class="char screen-input">*</span></td>
+                    <td><span class="char screen-input">/</span></td>
+                </tr>
+                <tr>
+                    <td><span class="number screen-input">1</span></td>
+                    <td><span class="number screen-input">2</span></td>
+                    <td><span class="number screen-input">3</span></td>
+                    <td><span class="char screen-input">+</span></td>
+                    <td><span class="char screen-input">-</span></td>
+                </tr>
+                <tr>
+                    <td><span class="char screen-input">.</span></td>
+                    <td><span class="number screen-input">0</span></td>
+                    <td><span class="char switch">&plusmn;</span></td>
+                    <td colspan="2"><span class="char enter">=</span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+	
+	<script>
+		const resultScreen = document.querySelector(".c_result");
+		const exScreen = document.querySelector(".c_ex");
+		const btnScreenInputList = document.querySelectorAll(".screen-input");
+		const btnPercentage = document.querySelector(".percentage");
+		const btnSqrt = document.querySelector(".sqrt");
+		const btnSwitch = document.querySelector(".switch");
+		const btnDel = document.querySelector(".del");
+		const btnClear = document.querySelector(".clear");
+		const btnEnter = document.querySelector(".enter");
+		
+
+		for (let i = 0; i < btnScreenInputList.length; i++) {
+			btnScreenInputList[i].addEventListener("click", function(){
+				resultScreen.innerText += btnScreenInputList[i].innerText;
+				<!-- console.log(btnNumList[i].innerText); -->
+			})
+		}
+	
+		btnPercentage.addEventListener("click", function(){
+			exScreen.innerText = `${resultScreen.innerText}%`;
+			resultScreen.innerText = eval(resultScreen.innerText) / 100;
+		})
+
+		btnSqrt.addEventListener("click", function(){
+			exScreen.innerHTML = `&radic;(${resultScreen.innerText})`;
+			resultScreen.innerText = Math.sqrt(eval(resultScreen.innerText));
+		})
+
+		btnSwitch.addEventListener("click", function(){
+			exScreen.innerHTML = `-(${resultScreen.innerText})`;
+			resultScreen.innerText = -eval(resultScreen.innerText);
+		})
+
+		btnEnter.addEventListener("click", function(){
+			if (resultScreen.innerText == "") resultScreen.innerText = "0";
+			exScreen.innerText = resultScreen.innerText;
+			resultScreen.innerText = eval(exScreen.innerText);
+		})
+		
+		btnDel.addEventListener("click", function() {
+			let tempArr = resultScreen.innerText.split("");
+			tempArr.pop();
+			resultScreen.innerText = tempArr.join("");
+			exScreen.innerText = "";
+		})
+		
+		btnClear.addEventListener("click", function() {
+			resultScreen.innerText = "";
+			exScreen.innerText = "";
+		})
+		
+	</script>
+</body>
+
+</html>

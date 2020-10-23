@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #list li:nth-child(1) {
+            color: red;
+        }
+
+        #list li:nth-child(4) {
+            color: blue;
+        }
+		
+		.hide {
+			display: none;
+		}
+    </style>
+</head>
+<body>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+    </ul>
+
+    <script>
+		<!-- 1. Thêm 3 thẻ <li> có nội dung Item 8, Item 9, Item 10 vào cuối danh sách -->
+		const itemList = document.getElementById("list");	
+		const itemEight = document.createElement("li");
+		const itemNine = document.createElement("li");
+		const itemTen = document.createElement("li");
+		
+		itemEight.innerText = "Item 8";
+		itemNine.innerText = "Item 9";
+		itemTen.innerText = "Item 10";
+		itemList.appendChild(itemEight);
+		itemList.appendChild(itemNine);
+		itemList.appendChild(itemTen);
+		
+		const itemList2 = itemList.getElementsByTagName("li");
+		<!-- 2. Sửa nội dung cho thẻ <li> 1 thành màu đỏ (color) -->
+		itemList2[1].style.color = "red";
+
+		<!-- 3. Sửa background cho thẻ <li> 3 thành màu xanh (background-color) -->
+		itemList2[3].style.backgroundColor = "blue";
+		
+		<!-- 4. Remove thẻ <li> 4 -->
+		itemList2[4].remove();
+		
+		<!-- 5. Thêm thẻ <li> mới thay thế cho thẻ <li> 4 bị xóa ở bước trước, thẻ <li> mới có nội dung bất kỳ -->
+		const newItemFour = document.createElement("li");
+		newItemFour.innerText = "sample text";
+		itemList.insertBefore(newItemFour, itemList2[4]);
+
+		const addBtn = document.createElement("button");
+		addBtn.innerText = "Add";
+		addBtn.style.marginLeft = "30px";
+		document.body.appendChild(addBtn);
+		
+		<!-- 6. Thêm 1 nút "add" + 1 ô input để nhập text. Mỗi khi bấm nút thêm 1 thẻ <li> có nội dung là nội dung trong ô input vào cuối danh sách -->
+		const addInputField = document.createElement("input");
+		addInputField.placeholder = "Enter text";
+		addInputField.style.marginLeft = "10px";
+		document.body.appendChild(addInputField);
+		document.write("<br>");
+		
+		addBtn.addEventListener("click", function(){
+			let newItem = document.createElement("li");
+			if (addInputField.value != "") {
+				newItem.innerText = addInputField.value;
+				itemList.appendChild(newItem); 
+				addInputField.value = "";
+			}
+		})
+
+		<!-- 7. Thêm 1 nút "remove". Chức năng để xóa thẻ <li> cuối cùng của danh sách -->
+		const removeBtn = document.createElement("button");
+		removeBtn.innerText = "Remove";
+		removeBtn.style.marginLeft = "30px";
+		removeBtn.style.marginTop = "10px";
+		document.body.appendChild(removeBtn);
+		removeBtn.addEventListener("click", function(){
+			itemList2[itemList2.length - 1].remove();
+		})
+
+		<!-- 8. Thêm 1 nút "Hide" trên đầu của danh sách <ul>.  -->
+		<!-- Khi bấm vào "Hide" thì <ul> sẽ ẩn. Đồng thời label của nút "Hide" => "Show" -->
+		<!-- Và ngược lại Khi bấm vào "Show" thì <ul> sẽ hiện. Đồng thời label của nút "Show" => "Hide" -->
+		const btnToggle = document.createElement("button");
+		btnToggle.innerText = "Hide";
+        <!-- btnHideToggle.setAttribute("id","btnToggle"); -->
+		document.body.insertBefore(btnToggle, itemList);
+
+		btnToggle.addEventListener("click", function(){
+			itemList.classList.toggle("hide");
+			if (btnToggle.innerText == "Hide") btnToggle.innerText = "Show";
+			else btnToggle.innerText = "Hide";
+		})
+				
+    </script>
+</body>
+</html>

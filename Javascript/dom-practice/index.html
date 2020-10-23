@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>DOM Homework 1</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		.highlight {
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+    <h1>Heading</h1>
+    <p>
+		Hey, you're not permitted in there. It's restricted. You'll be deactivated for sure... Don't call me a mindless philosopher, you overweight glob of grease! Now come out before somebody sees you. Secret mission? What plans? What are you talking about? I'm not getting in there! I'm going to regret this. There goes another one. Hold your fire. There are no life forms. It must have been short-circuited. That's funny, the damage doesn't look as bad from out here. Are you sure this things safe?
+		
+		Close up formation. You'd better let her loose. Almost there! I can't hold them! It's away! It's a hit! Negative. Negative! It didn't go in. It just impacted on the surface. Red Leader, we're right above you. Turn to point... oh-five, we'll cover for you. Stay there... I just lost my starboard engine. Get set to make your attack run.
+		
+		The Death Star plans are not in the main computer. Where are those transmissions you intercepted? What have you done with those plans? We intercepted no transmissions. Aaah... This is a consular ship. Were on a diplomatic mission. If this is a consular ship... were is the Ambassador? Commander, tear this ship apart until you've found those plans and bring me the Ambassador. I want her alive! There she is! Set for stun! She'll be all right. Inform Lord Vader we have a prisoner.
+
+        What a piece of junk. She'll make point five beyond the speed of light. She may not look like much, but she's got it where it counts, kid. I've added some special modifications myself. We're a little rushed, so if you'll hurry aboard we'll get out of here. Hello, sir. Which way? All right, men. Load your weapons! Stop that ship! Blast 'em! Chewie, get us out of here! Oh, my. I'd forgotten how much I hate space travel.
+
+        Run, Luke! Run!</p>
+
+	<script>
+		const paraAll = document.querySelector("p");
+		let allText = paraAll.innerText.split(" ");
+		<!-- console.log(allText); -->
+		paraAll.innerHTML = "";
+		
+		for (let i = 0; i < allText.length; i++){
+			if (allText[i].length < 8)
+				paraAll.innerHTML += `${allText[i]} `;
+			else paraAll.innerHTML += `<span class="highlight">${allText[i]}</span> `;
+		}
+		
+		const fbLink = document.createElement("a");
+		fbLink.href = "https://www.facebook.com";
+		fbLink.innerText = "Facebook";
+		document.body.appendChild(fbLink);
+		
+		const wordCount = document.createElement("div");
+		wordCount.innerText = `Word count: ${allText.length}`;
+		document.body.insertBefore(wordCount, document.querySelector("h1"));
+		
+		console.log(paraAll.innerText);
+		
+		<!-- for (let i = ) -->
+	
+		<!-- const paras = document.getElementsByTagName("p"); -->
+		
+		<!-- const paras1 = document.getElementsByClassName("para4"); -->
+		<!-- console.log(paras1); -->
+		<!-- const paras2 = document.querySelectorAll("p"); -->
+		<!-- console.log(paras2); -->
+		<!-- const paras3 = document.querySelectorAll(".para4") -->
+		<!-- console.log(paras3); -->
+		
+		<!-- console.log(h1.innerText); -->
+		<!-- console.log(h1.textContent); -->
+		<!-- console.log(h1.innerHTML); -->
+		
+		<!-- h1.innerHTML = "<button>Click Me!</button>"; -->
+		
+		<!-- const link = document.createElement("a"); -->
+		<!-- link.innerText = "google.com"; -->
+		<!-- link.href = "https://www.google.com"; -->
+		<!-- link.target = "_blank"; -->
+		<!-- document.body.appendChild(link); -->
+		
+		<!-- const input = document.createElement("input"); -->
+		<!-- input.placeholder = "Enter name"; -->
+		<!-- document.body.prepend(input); -->
+		
+		<!-- const newHeading = document.createElement("h1"); -->
+		<!-- newHeading.innerText = "New Balans Ships!"; -->
+		
+		<!-- const paras4 = document.querySelector(".para4"); -->
+		<!-- const paras5 = document.querySelector(".para3"); -->
+		<!-- console.log(paras4); -->
+		
+		<!-- <!-- document.body.insertBefore(newHeading, paras4); --> -->
+		<!-- paras4.insertAdjacentElement("beforeBegin", newHeading); -->
+		<!-- paras5.insertAdjacentElement("afterEnd", newHeading); -->
+		<!-- paras5.insertAdjacentHTML("beforeBegin", "<h1>Good morning motherf*cker!</h1>"); -->
+		
+		<!-- document.body.removeChild(paras5); -->
+		<!-- paras4.parentNode.removeChild(paras4); -->
+		
+		<!-- newHeading.style.color = "red"; -->
+		
+		<!-- document.querySelector("a").classList.add("text-big"); -->
+		<!-- document.querySelector("a").classList.add("class-1", "class-2", "class-3"); -->
+		
+		<!-- document.querySelector("a").classList.remove("class-1") -->
+		<!-- document.querySelector("a").classList.remove("class-2", "class-3"); -->
+		
+		<!-- console.log(document.querySelector("a").classList.contains("text-big")); -->
+		
+		<!-- const btnToggleClass = document.getElementsById("btn-toggle-class"); -->
+		<!-- btnToggleClass.addEventListener("click", function() { -->
+			<!-- document.querySelector("a").classList.toggle("text-big"); -->
+		<!-- }) -->
+		
+		<!-- const img = document.querySelector("img"); -->
+		<!-- console.log(img.src); -->
+		<!-- console.log(img.getAttribute("src")); -->
+		
+		<!-- img.setAttribute("src", "https://cdn.discordapp.com/emojis/609920619718377532.png"); -->
+		<!-- img.setAttribute("color", "red"); -->
+		
+		
+	</script>
+		
+</body>	
+</html>

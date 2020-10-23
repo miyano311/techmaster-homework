@@ -1,0 +1,63 @@
+
+.container {
+	width: 1200px;
+	height: 700px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: purple;
+}
+
+.tool {
+	display: flex;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 10px;
+}
+
+.brush-color {
+	flex: 40%;
+}
+
+.delete-all {
+	flex: 10%;
+}
+
+/* .brush-size { */
+	/* flex: 40%; */
+/* } */
+
+.active_color_button {
+	border: 4px solid black;
+}
+
+.active_size_button {
+	border: 4px solid black;
+}
+
+button.color-button {
+	width: 40px;
+	height: 40px;
+	margin-left: 10px;
+}
+
+button#buttonWhite {
+	background-color: #fff;
+}
+
+button#buttonYellow {
+	background-color: yellow;
+}
+
+button#buttonRed {
+	background-color: red;
+}
+
+button#buttonGreen {
+	background-color: green;
+}
+
+button#buttonCyan {
+	background-color: cyan;
+}

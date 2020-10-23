@@ -1,0 +1,141 @@
+body {
+	background-color: #2C3E50;
+	font-family: "Roboto";
+}
+
+.align-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.start-box {
+	height: 220px;
+	background-color: rgba(0, 0, 0, 0.3);
+	margin: 17% 0 0 0;
+}
+
+.start-box .start-box-text {
+	padding-top: 25px;
+	text-align: center;
+	font-size: 32px;
+	font-weight: 700;
+	color: #fff;
+}
+
+.dropdown-menu {
+	width: 200px;
+	height: 37px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 400;
+
+	margin-top: 25px;
+}
+
+.dropdown-menu .btn-drop-menu, .btn-drop-option {
+	width: 200px;
+	height: 37px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+
+.btn-drop-option {
+	border: none;
+	border-radius: 0;
+	background-color: #ccc;
+}
+
+.dropdown-menu .dropdown-content {
+	position: absolute;
+	width: 200px;
+	z-index: 2;
+}
+
+.flex {display: flex; flex-wrap: wrap;}
+.hide {display: none;}
+
+.btn-start {
+	position: absolute;
+	width: 100px;
+	height: 32px;
+	border-radius: 4px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 400;
+
+	margin-top: 25px;
+	margin-left: 46%;
+	z-index: 1;
+}
+
+.game-session-box {	
+	width: 500px;
+	height: 422px;
+	background-color: #34495E;
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+	
+	margin-top: 10%;
+	padding-top: 30px;
+}
+
+.game-title {
+	width: 460px;
+	height: 45px;
+	padding-top: 15px;
+	margin-bottom: 25px;
+	
+	text-align: center;
+	font-size: 24px;
+	color: #fff;
+}
+
+.game-tracker {
+	display: flex;
+	margin-left: 20px;
+}
+
+.game-timer, .game-score-tracker {
+	width: 160px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #fff;
+}
+
+.game-score-tracker {
+	margin-left: 140px;
+}
+
+.game-tracker-box {
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 4px;
+}
+
+.red-txt {
+	color: red;
+}
+
+.game-instruction-text {
+	font-weight: 400;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	
+	margin-top: 15px;
+}
+
+.typing-target {
+	padding-top: 40px;
+	font-weight: 700;
+	font-size: 32px;
+	color: #fff;
+	text-align: center;
+}
+
+.game-input {
+	width: 300px;
+	height: 42px;
+	border-radius: 4px;
+	margin-left: 18%;
+	margin-top: 10%;
+}

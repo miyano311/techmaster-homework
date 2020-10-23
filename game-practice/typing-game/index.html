@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>Typing Game</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="start-box">
+		<div class="start-box-text">Select your preferred level!</div>
+		<div class="dropdown-menu align-center">
+			<button type="button" onclick="dropdownToggle()" class="btn-drop-menu">Easy</button>
+			<div id="dropdownToggle" class="dropdown-content hide">
+				<button type="button" onclick="changeMode('Easy')" id="easyMode" class="btn-drop-option">Easy</button>
+				<button type="button" onclick="changeMode('Normal')" id="normalMode" class="btn-drop-option">Normal</button>
+				<button type="button" onclick="changeMode('Hard')" id="hardMode" class="btn-drop-option">Hard</button>
+				<button type="button" onclick="changeMode('Lunatic')" id="lunaticMode" class="btn-drop-option">Lunatic</button>
+			</div>
+		</div>
+		<button type="button" onclick="startingGame()" class="btn-start">Start Game</button>
+	</div>
+	
+	<div class="game-session-box align-center hide">
+		<div class="game-tracker-box align-center game-title">Typing Game</div>
+		<div class="game-tracker">
+			<div id="timer" class="game-tracker-box game-timer">Time left: ---</div>
+			<div class="game-tracker-box game-score-tracker">Score: 0</div>
+		</div>
+		<div class="game-instruction-text align-center">Type in the following word(s):</div>
+		<div class="typing-target align-center">sample text</div>
+		<input type="text" placeholder="Type in the above word" class="game-input">
+	</div>
+	
+	<div class="end-box">
+		
+	</div>
+	
+	<script src="typing-game.js"></script>
+</body>
+</html>

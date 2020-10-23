@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>To-Do List</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="to-do-box">
+			<h2>To-Do List</h2>
+			<div class="input-area">
+				<input type="text" placeholder="Add extra reminder" name="newReminder" id="newReminder" required>
+				<button type="button" class="addButton">ADD</button>
+			</div>
+			<form class="radio-list">
+				<div class="radio-box">
+					<input type="radio" id="allReminders" name="radio-box" value="all">
+					<label for="allReminders">All</label>
+				</div>
+				<div class="radio-box">
+					<input type="radio" id="unfinished" name="radio-box" value="unfinished">
+					<label for="unfinished">Unfinished</label>
+				</div>
+				<div class="radio-box">
+					<input type="radio" id="finished" name="radio-box" value="finished">
+					<label for="finished">Finished</label>
+				</div>
+			</form>
+			<div class="to-do-list"></div>
+		</div>
+	</div>
+	<script src="todo.js"></script>
+
+</body>
+</html>

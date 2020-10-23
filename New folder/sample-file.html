@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>Canvas Practice</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<!-- <br /> -->
+	<button id="checkBallStatus">Check Ball Status</button>
+	<!-- <button id="randomCircleButton">Draw a random circle</button> -->
+	<!-- <button id="random5CirclesButton">Draw 5 random circles</button> -->
+	<!-- <br /> -->
+	<!-- <button id="randomTextButton">Draw a random piece of text</button> -->
+	<!-- <input type="text" placeholder="sample text" value="sample text" id="textinput" /> -->
+	<!-- <button id="deleteAllButton">Delete All</button> -->
+	<script>
+		const canvas = document.getElementById("canvas");
+		canvas.width = innerWidth * 0.95;
+		canvas.height = innerHeight * 0.95;
+		<!-- canvas.style.border = "solid 4px"; -->
+		canvas.style.backgroundColor = "#000";
+		
+		const ctx = canvas.getContext("2d");
+		
+		class Circle {
+			constructor(x, y, radius) {
+				this.x = x;
+				this.y = y;
+				this.radius = radius;
+				this.color = `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+			}
+			
+			draw() {
+				ctx.beginPath();
+				ctx.fillStyle = this.color;
+				ctx.strokeStyle = "black";
+				ctx.arc(this.x,this.y,this.radius,0,2*Math.PI,false);
+				ctx.fill();
+				ctx.stroke();
+			}
+		}
+
+		
+		function randomHexColor(){
+			return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+		}
+
+		<!-- document.addEventListener("keypress", function(e) { -->
+			<!-- if ( e.keyCode == 13 ) { -->
+				<!-- let tempX = Math.floor(Math.random() * canvas.width); -->
+				<!-- let tempY = Math.floor(Math.random() * canvas.height); -->
+				<!-- let tempRad = Math.floor(Math.random() * 70)+20; -->
+				<!-- let tempCircle = new Circle(tempX, tempY, tempRad); -->
+				<!-- tempCircle.draw(); -->
+			<!-- }  -->
+		<!-- }) -->
+		
+		<!-- let isDraw = false; -->
+		
+		<!-- document.addEventListener("mousedown", function(e) { -->
+			<!-- isDraw = true; -->
+		<!-- }) -->
+		
+		<!-- document.addEventListener("mousemove", function(e) { -->
+			<!-- if (isDraw) { -->
+				<!-- <!-- ctx.clearRect(0,0,canvas.width,canvas.height); --> -->
+				<!-- ctx.beginPath(); -->
+				<!-- ctx.fillStyle = "#fff"; -->
+				<!-- ctx.arc(e.offsetX,e.offsetY,30,0,2*Math.PI,false); -->
+				<!-- ctx.fill(); } -->
+		<!-- }); -->
+
+		<!-- document.addEventListener("mouseup", function(e) { -->
+			<!-- isDraw = false; -->
+		<!-- }) -->
+		
+		<!-- randomRectButton.addEventListener("click", function(){ -->
+			<!-- let tempX = Math.floor(Math.random() * canvas.width); -->
+			<!-- let tempY = Math.floor(Math.random() * canvas.height); -->
+			<!-- ctx.beginPath(); -->
+			<!-- ctx.fillStyle = randomHexColor(); -->
+			<!-- ctx.rect(tempX,tempY,180,100); -->
+			<!-- ctx.fill(); -->
+		<!-- } ) -->
+		
+		<!-- randomCircleButton.addEventListener("click", function(){ -->
+			<!-- let tempX = Math.floor(Math.random() * canvas.width); -->
+			<!-- let tempY = Math.floor(Math.random() * canvas.height); -->
+			<!-- ctx.beginPath(); -->
+			<!-- ctx.fillStyle = randomHexColor(); -->
+			<!-- ctx.arc(tempX,tempY,70,0,2*Math.PI,false); -->
+			<!-- ctx.fill(); -->
+		<!-- }) -->
+		
+		<!-- random5CirclesButton.addEventListener("click", function(){ -->
+			<!-- let i = 0; -->
+			<!-- while (i < 5) { -->
+				<!-- let tempX = Math.floor(Math.random() * canvas.width); -->
+				<!-- let tempY = Math.floor(Math.random() * canvas.height); -->
+				<!-- ctx.beginPath(); -->
+				<!-- ctx.fillStyle = randomHexColor(); -->
+				<!-- ctx.arc(tempX,tempY,70,0,2*Math.PI,false); -->
+				<!-- ctx.fill(); -->
+				<!-- i++; -->
+			<!-- } -->
+		<!-- }) -->
+		
+		<!-- randomTextButton.addEventListener("click", function(){ -->
+			<!-- let tempX = Math.floor(Math.random() * canvas.width); -->
+			<!-- let tempY = Math.floor(Math.random() * canvas.height); -->
+			<!-- let text = textinput.value; -->
+			<!-- if (text === "") text = "sample text"; // default text -->
+			<!-- ctx.beginPath(); -->
+			<!-- ctx.fillStyle = "#fff"; -->
+			<!-- ctx.font = "50px Arial"; -->
+			<!-- ctx.textAlign = "center"; -->
+			<!-- ctx.fillText(`${text}`, tempX, tempY); -->
+		<!-- }) -->
+
+		<!-- deleteAllButton.addEventListener("click", function(){ -->
+			<!-- ctx.clearRect(0,0,canvas.width,canvas.height); -->
+		<!-- }) -->
+
+		<!-- function drawRedCross() { -->
+			<!-- ctx.moveTo(0,0); -->
+			<!-- ctx.lineTo(canvas.width,canvas.height); -->
+			<!-- ctx.moveTo(canvas.width,0); -->
+			<!-- ctx.lineTo(0,canvas.height); -->
+			<!-- ctx.strokeStyle = "red"; -->
+			<!-- ctx.stroke(); -->
+		<!-- } -->
+		
+		<!-- drawRedCross(); -->
+		
+		<!-- window.addEventListener("resize", function() { -->
+			<!-- canvas.width = innerWidth * 0.9; -->
+			<!-- canvas.height = innerHeight * 0.9; -->
+			<!-- drawRedCross(); -->
+		<!-- }) -->
+
+		// a ball class similar to Circle class
+		class Ball {
+			constructor(x, y, radius) {
+				this.x = x;
+				this.y = y;
+				this.radius = radius;
+				this.velocityX = 0;
+				this.velocityY = 0;
+				this.isVisible = true;
+			}
+			
+			drawFodder() {
+				if (this.isVisible) {
+					ctx.beginPath();
+					ctx.fillStyle = "red";
+					ctx.arc(this.x,this.y,this.radius,0,2*Math.PI,false);
+					ctx.stroke();
+					ctx.fill();
+				}
+			}
+			
+			drawMain() {
+				ctx.beginPath();
+				ctx.fillStyle = "yellow";
+				ctx.arc(this.x,this.y,this.radius,0,2*Math.PI,false);
+				ctx.stroke();
+				ctx.fill();
+
+				ctx.fillStyle = "#000";
+				ctx.font = "30px Verdana";
+				ctx.textAlign = "center";
+				ctx.fillText("DIO",this.x,this.y+10);
+			}
+			
+			move() {
+				ctx.clearRect(0,0,canvas.width,canvas.height);
+				if (this.x > canvas.width)
+					if (this.velocityX > 0) this.velocityX = 0;
+				if (this.x < 0)
+					if (this.velocityX < 0) this.velocityX = 0;
+				if (this.y > canvas.height)
+					if (this.velocityY > 0) this.velocityY = 0;
+				if (this.y < 0)
+					if (this.velocityY < 0) this.velocityY = 0;
+				this.x = this.x + this.velocityX;
+				this.y = this.y + this.velocityY;
+				this.drawMain();
+				drawAllFodders();
+			}
+		}
+
+		let ballDio = new Ball(50,50,50);
+		ballDio.drawMain();
+		
+		// randomly generate from 10 to 30 fodder balls
+		function generateFodders() {
+			let output = [];
+			let n = Math.floor(Math.random() * 20) + 10;
+			let i = 0;
+			while (i < n){
+				let ballTemp = new Ball(Math.floor(Math.random() * (canvas.width-100) +100),Math.floor(Math.random() * (canvas.height-100)+100),15);
+				output.push(ballTemp);
+				i++;
+			}
+			return output;
+		}
+
+		addEventListener("keydown", function(e){
+			if (e.keyCode == 37) ballDio.velocityX = -10;
+			if (e.keyCode == 38) ballDio.velocityY = -10;
+			if (e.keyCode == 39) ballDio.velocityX = 10;
+			if (e.keyCode == 40) ballDio.velocityY = 10;
+			<!-- if (e.keyCode == 27) { -->
+				<!-- ballDio.velocityX = 0; -->
+				<!-- ballDio.velocityY = 0; -->
+			<!-- } -->
+		})
+
+		addEventListener("keyup", function(e){
+			if (e.keyCode == 37) ballDio.velocityX = 0;
+			if (e.keyCode == 38) ballDio.velocityY = 0;
+			if (e.keyCode == 39) ballDio.velocityX = 0;
+			if (e.keyCode == 40) ballDio.velocityY = 0;
+		})
+		
+		
+		function animate() {
+			requestAnimationFrame(animate);
+			ctx.clearRect(0,0,canvas.width,canvas.height);
+			ballDio.move();
+			collisionDetection();
+			ballDio.drawMain();
+			drawAllFodders();
+			checkAllCleared();
+		}
+		
+		let testArr = generateFodders();
+		<!-- console.log(testArr); -->
+		function drawAllFodders() {
+			for (let i = 0; i < testArr.length; i++) {
+				testArr[i].drawFodder();
+			}
+		}
+		
+		function collisionDetection() {
+			let i = 0;
+			while (i < testArr.length) {
+				let tempDist = Math.sqrt(Math.pow(ballDio.x-testArr[i].x, 2) + Math.pow(ballDio.y-testArr[i].y, 2));
+				let sumRadius = ballDio.radius + testArr[i].radius;
+				if (sumRadius > tempDist) testArr[i].isVisible = false;
+				i++;
+			}
+		}
+		
+		function checkAllCleared() {
+			let isCleared = true;
+			for (let i = 0; i < testArr.length; i++) {
+				if (testArr[i].isVisible == true) {
+					isCleared = false;
+					break;
+				}
+			}			
+			if (isCleared == true) resetGame();
+		}
+		
+		function resetGame() {
+			alert("You cleared all the balls! Click OK to play again!");
+		}
+		
+		drawAllFodders();
+		animate();
+		
+		checkBallStatus.addEventListener("click", function(){
+			let temp = "";
+			for (let i = 0; i < testArr.length; i++) {
+				temp += `${testArr[i].isVisible} `;
+			}
+			alert(temp);
+		})
+
+		
+	</script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>Canvas Practice</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<!-- <br /> -->
+	<!-- <button id="checkBallStatus">Check Ball Status</button> -->
+	<!-- <button id="randomCircleButton">Draw a random circle</button> -->
+	<!-- <button id="random5CirclesButton">Draw 5 random circles</button> -->
+	<!-- <br /> -->
+	<!-- <button id="randomTextButton">Draw a random piece of text</button> -->
+	<!-- <input type="text" placeholder="sample text" value="sample text" id="textinput" /> -->
+	<!-- <button id="deleteAllButton">Delete All</button> -->
+	<script>
+		const canvas = document.getElementById("canvas");
+		canvas.width = innerWidth * 0.95;
+		canvas.height = innerHeight * 0.95;
+		canvas.style.border = "solid 4px";
+		<!-- canvas.style.backgroundColor = "#000"; -->
+		
+		const ctx = canvas.getContext("2d");
+		
+		class Ball {
+			constructor(x, y, radius) {
+				this.x = x;
+				this.y = y;
+				this.radius = radius;
+				this.velocityX = 0;
+				this.velocityY = 0;
+			}
+						
+			draw() {
+				ctx.beginPath();
+				ctx.fillStyle = "red";
+				ctx.arc(this.x,this.y,this.radius,0,2*Math.PI,false);
+				ctx.fill();
+			}
+			
+			<!-- move() { -->
+				<!-- ctx.clearRect(0,0,canvas.width,canvas.height); -->
+				<!-- if (this.x > canvas.width) -->
+					<!-- if (this.velocityX > 0) this.velocityX = 0; -->
+				<!-- if (this.x < 0) -->
+					<!-- if (this.velocityX < 0) this.velocityX = 0; -->
+				<!-- if (this.y > canvas.height) -->
+					<!-- if (this.velocityY > 0) this.velocityY = 0; -->
+				<!-- if (this.y < 0) -->
+					<!-- if (this.velocityY < 0) this.velocityY = 0; -->
+				<!-- this.x = this.x + this.velocityX; -->
+				<!-- this.y = this.y + this.velocityY; -->
+				<!-- this.drawMain(); -->
+			<!-- } -->
+		}
+		
+		class Brick {
+			constructor(x, y, width, height) {
+				this.x = x;
+				this.y = y;
+				this.width = width;
+				this.height = height;
+				this.velocityX = 0;
+				this.velocityY = 0;
+				this.isVisible = true;
+			}
+			
+			drawPaddle() {
+				ctx.beginPath();
+				ctx.fillStyle = "gray";
+				ctx.fillRect(this.x-this.width/2,this.y-this.height/2,this.width,this.height);
+			}
+
+			drawFodder() {
+				if (this.isVisible) {
+					ctx.beginPath();
+					ctx.fillStyle = "cyan";
+					ctx.fillRect(this.x-this.width/2,this.y-this.height/2,this.width,this.height);
+					ctx.stroke();
+				}
+			}
+		}
+
+		let wreckingBall = new Ball(canvas.width/2,canvas.height*0.9,20);
+		let paddleTest = new Brick(canvas.width/2,canvas.height*0.95,200,20);
+		wreckingBall.draw();
+		paddleTest.drawPaddle();
+		
+		addEventListener("keydown", function(e){
+			if (e.keyCode == 37) paddleTest.velocityX = -15;
+			if (e.keyCode == 39) paddleTest.velocityX = 15;
+			if (e.keyCode == 13) {
+				wreckingBall.velocityX = 15;
+				wreckingBall.velocityY = -10;
+			}
+		})
+
+		addEventListener("keyup", function(e){
+			if (e.keyCode == 37) paddleTest.velocityX = 0;
+			if (e.keyCode == 39) paddleTest.velocityX = 0;
+		})
+		
+		<!-- // randomly generate from 10 to 30 fodder balls -->
+		<!-- function generateFodders() { -->
+			<!-- let output = []; -->
+			<!-- let n = Math.floor(Math.random() * 20) + 10; -->
+			<!-- let i = 0; -->
+			<!-- while (i < n){ -->
+				<!-- let ballTemp = new Ball(Math.floor(Math.random() * (canvas.width-100) +100),Math.floor(Math.random() * (canvas.height-100)+100),15); -->
+				<!-- output.push(ballTemp); -->
+				<!-- i++; -->
+			<!-- } -->
+			<!-- return output; -->
+		<!-- } -->
+		
+		function collisionDetection() {
+			if (paddleTest.x > canvas.width-paddleTest.width/2)
+				if (paddleTest.velocityX > 0) paddleTest.velocityX = 0;
+			if (paddleTest.x < paddleTest.width/2)
+				if (paddleTest.velocityX < 0) paddleTest.velocityX = 0;
+			if (wreckingBall.x > canvas.width-wreckingBall.radius) wreckingBall.velocityX = -wreckingBall.velocityX;
+			if (wreckingBall.x < wreckingBall.radius) wreckingBall.velocityX = -wreckingBall.velocityX;
+			if (wreckingBall.y > canvas.height-wreckingBall.radius) {
+				wreckingBall.velocityX = 0;
+				wreckingBall.velocityY = 0;
+				endGame();
+			}
+			if (wreckingBall.y < wreckingBall.radius) wreckingBall.velocityY = -wreckingBall.velocityY;
+			
+			if (wreckingBall.y > paddleTest.y - paddleTest.height/2 - wreckingBall.radius)
+				if (wreckingBall.x > paddleTest.x - paddleTest.width/2)
+					if (wreckingBall.x < paddleTest.x + paddleTest.width/2)
+						wreckingBall.velocityY = -wreckingBall.velocityY;
+		}
+
+		function move() {
+			ctx.clearRect(0,0,canvas.width,canvas.height);
+			collisionDetection();
+			paddleTest.x = paddleTest.x + paddleTest.velocityX;
+			wreckingBall.x = wreckingBall.x + wreckingBall.velocityX;
+			wreckingBall.y = wreckingBall.y + wreckingBall.velocityY;
+		}
+
+<!-- function checkBallBrickCollision(collidingBall, collidedBrick, isPaddle) -->
+<!-- { -->
+    <!-- let Ax = collidingBall.x; -->
+    <!-- let Ay = collidingBall.y; -->
+
+    <!-- if(collidingBall.x < collidedBrick.x - collidedBrick.width/2) -->
+        <!-- Ax = collidedBrick.x - collidedBrick.width/2; -->
+    <!-- else if(cir.O.x > collidedBrick.x + collidedBrick.width/2) -->
+        <!-- Ax = collidedBrick.x + collidedBrick.width/2; -->
+
+    <!-- if(cir.O.y < rect.top) -->
+        <!-- Ay = rect.top; -->
+    <!-- else if(cir.O.y > rect.bottom) -->
+        <!-- Ay = rect.bottom; -->
+
+    <!-- double dx = cir.O.x - Ax; -->
+    <!-- double dy = cir.O.y - Ay; -->
+
+    <!-- return (dx * dx + dy * dy) <= cir.r * cir.r; -->
+<!-- } -->
+		
+		<!-- function generateBrickFodder() { -->
+			<!-- let output = []; -->
+			<!-- for (let i = 0; i < 3; i++) { -->
+				<!-- let brickRow = []; -->
+				<!-- for (let j = 0; j < 10; j++) { -->
+					<!-- let tempBrick = new Brick(canvas.width/22*(1+2*j),canvas.height/30*(1+2*i),canvas.width/11,canvas.height/15); -->
+					<!-- brickRow.push(tempBrick); -->
+				<!-- } -->
+				<!-- output.push(brickRow); -->
+			<!-- } -->
+			<!-- return output; -->
+		<!-- } -->
+		
+		<!-- function drawBrickFodder() { -->
+			<!-- for (let i = 0; i < brickArray.length; i++) -->
+				<!-- for (let j = 0; j < brickArray[i].length; j++) -->
+					<!-- brickArray[i][j].drawFodder(); -->
+		<!-- } -->
+
+		let brickArray = generateBrickFodder();
+		drawBrickFodder();
+		
+		function animate() {
+			requestAnimationFrame(animate);
+			ctx.clearRect(0,0,canvas.width,canvas.height);
+			move();
+			<!-- collisionDetection(); -->
+			<!-- ballDio.drawMain(); -->
+			<!-- drawAllFodders(); -->
+			wreckingBall.draw();
+			paddleTest.drawPaddle();			
+		}
+		
+		function endGame() {
+			ctx.clearRect(0,0,canvas.width,canvas.height);
+			ctx.fillStyle = "#000";
+			ctx.font = "60px Verdana";
+			ctx.textAlign = "center";
+			ctx.fillText("GAME OVER",canvas.width/2,canvas.height/2);
+		}
+
+		<!-- let testArr = generateFodders(); -->
+		<!-- <!-- console.log(testArr); --> -->
+		<!-- function drawAllFodders() { -->
+			<!-- for (let i = 0; i < testArr.length; i++) { -->
+				<!-- testArr[i].drawFodder(); -->
+			<!-- } -->
+		<!-- } -->
+		
+		
+		<!-- drawAllFodders(); -->
+		animate();
+		
+		<!-- checkBallStatus.addEventListener("click", function(){ -->
+			<!-- let temp = ""; -->
+			<!-- for (let i = 0; i < testArr.length; i++) { -->
+				<!-- temp += `${testArr[i].isVisible} `; -->
+			<!-- } -->
+			<!-- alert(temp); -->
+		<!-- }) -->
+
+		
+	</script>
+</body>
+</html>

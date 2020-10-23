@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<title>DOM Practice</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1 id="header">
+		Very Balans Header
+		<span>SerB</span>
+		<span>Bias Against German Ships!</span>
+	</h1>
+	
+	
+	<script>
+		const h1 = document.getElementsById("header");
+		console.log(h1);
+	
+		const paras = document.getElementsByTagName("p");
+		
+		const paras1 = document.getElementsByClassName("para4");
+		console.log(paras1);
+		const paras2 = document.querySelectorAll("p");
+		console.log(paras2);
+		const paras3 = document.querySelectorAll(".para4")
+		console.log(paras3);
+		
+		console.log(h1.innerText);
+		console.log(h1.textContent);
+		console.log(h1.innerHTML);
+		
+		h1.innerHTML = "<button>Click Me!</button>";
+		
+		const link = document.createElement("a");
+		link.innerText = "google.com";
+		link.href = "https://www.google.com";
+		link.target = "_blank";
+		document.body.appendChild(link);
+		
+		const input = document.createElement("input");
+		input.placeholder = "Enter name";
+		document.body.prepend(input);
+		
+		const newHeading = document.createElement("h1");
+		newHeading.innerText = "New Balans Ships!";
+		
+		const paras4 = document.querySelector(".para4");
+		const paras5 = document.querySelector(".para3");
+		console.log(paras4);
+		
+		<!-- document.body.insertBefore(newHeading, paras4); -->
+		paras4.insertAdjacentElement("beforeBegin", newHeading);
+		paras5.insertAdjacentElement("afterEnd", newHeading);
+		paras5.insertAdjacentHTML("beforeBegin", "<h1>Good morning motherf*cker!</h1>");
+		
+		document.body.removeChild(paras5);
+		paras4.parentNode.removeChild(paras4);
+		
+		newHeading.style.color = "red";
+		
+		document.querySelector("a").classList.add("text-big");
+		document.querySelector("a").classList.add("class-1", "class-2", "class-3");
+		
+		document.querySelector("a").classList.remove("class-1")
+		document.querySelector("a").classList.remove("class-2", "class-3");
+		
+		console.log(document.querySelector("a").classList.contains("text-big"));
+		
+		const btnToggleClass = document.getElementsById("btn-toggle-class");
+		btnToggleClass.addEventListener("click", function() {
+			document.querySelector("a").classList.toggle("text-big");
+		})
+		
+		const img = document.querySelector("img");
+		console.log(img.src);
+		console.log(img.getAttribute("src"));
+		
+		img.setAttribute("src", "https://cdn.discordapp.com/emojis/609920619718377532.png");
+		img.setAttribute("color", "red");
+		
+		
+	</script>
+</body>
+</html>
